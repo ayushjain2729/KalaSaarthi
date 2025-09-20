@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Started - KalaSaarthi</title>
+    <meta name="description" content="Begin your journey with KalaSaarthi. Choose your path as an artisan, buyer, or organization and start transforming traditional crafts through AI-powered technology." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fkalasaarth6818back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background font-body">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-cultural sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2L28 10V18L20 26L12 18V10L20 2Z" fill="#4F46E5"/>
+                        <path d="M20 8L24 12V16L20 20L16 16V12L20 8Z" fill="#F59E0B"/>
+                        <circle cx="20" cy="14" r="2" fill="white"/>
+                    </svg>
+                    <span class="ml-3 text-xl font-headlines font-bold text-text-primary">KalaSaarthi</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-cultural">Home</a>
+                    <a href="ai_assistant_demo.html" class="text-text-secondary hover:text-primary transition-cultural">AI Demo</a>
+                    <a href="artisan_success_stories.html" class="text-text-secondary hover:text-primary transition-cultural">Success Stories</a>
+                    <a href="cultural_heritage_showcase.html" class="text-text-secondary hover:text-primary transition-cultural">Heritage</a>
+                    <a href="partnership_portal.html" class="text-text-secondary hover:text-primary transition-cultural">Partners</a>
+                    <a href="get_started_hub.html" class="text-primary font-semibold">Get Started</a>
+                </div>
+
+                <!-- Language Selector -->
+                <div class="flex items-center space-x-4">
+                    <select id="languageSelector" class="text-sm border border-gray-200 rounded-lg px-3 py-1 focus:ring-2 focus:ring-primary-500" onchange="changeLanguage()">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="ta">தமிழ்</option>
+                        <option value="te">తెలుగు</option>
+                        <option value="mr">मराठी</option>
+                        <option value="gu">ગુજરાતી</option>
+                    </select>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden p-2 rounded-lg hover:bg-surface-100" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-3 space-y-3">
+                <a href="homepage.html" class="block text-text-secondary">Home</a>
+                <a href="ai_assistant_demo.html" class="block text-text-secondary">AI Demo</a>
+                <a href="artisan_success_stories.html" class="block text-text-secondary">Success Stories</a>
+                <a href="cultural_heritage_showcase.html" class="block text-text-secondary">Heritage</a>
+                <a href="partnership_portal.html" class="block text-text-secondary">Partners</a>
+                <a href="get_started_hub.html" class="block text-primary font-semibold">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-12 bg-gradient-to-br from-primary-50 to-accent-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-display font-headlines font-bold text-text-primary mb-4">
+                Welcome to your digital journey
+            </h1>
+            <p class="text-hero font-headlines font-bold text-accent-600 mb-4 font-accents">
+                आपकी डिजिटल यात्रा में आपका स्वागत है
+            </p>
+            <div class="flex items-center justify-center space-x-3 mb-6">
+                <button class="p-2 bg-primary-100 rounded-full hover:bg-primary-200 transition-cultural" onclick="playWelcomeVoice()">
+                    <svg class="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8 5v10l7-5-7-5z"/>
+                    </svg>
+                </button>
+                <span class="text-sm text-text-secondary">Listen in your language</span>
+            </div>
+            <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
+                Choose your path and let us guide you step by step. We'll adapt to your comfort level and help you succeed.
+            </p>
+        </div>
+    </section>
+
+    <!-- User Type Selection -->
+    <section class="py-16 bg-white" id="userTypeSection">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-heading font-headlines font-bold text-text-primary mb-4">
+                    I am...
+                </h2>
+                <p class="text-body text-text-secondary">
+                    Select the option that best describes you to get a personalized experience
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Artisan Path -->
+                <div class="cultural-card p-8 text-center cursor-pointer hover:ring-2 hover:ring-accent-400 transition-cultural" onclick="selectUserType('artisan')">
+                    <div class="w-24 h-24 mx-auto mb-6 bg-accent-100 rounded-full flex items-center justify-center">
+                        <svg class="h-12 w-12 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M7 4V2a1 1 0 011-1h4a1 1 0 011 1v2h3a1 1 0 110 2h-1v9a2 2 0 01-2 2H7a2 2 0 01-2-2V6H4a1 1 0 010-2h3zM9 6v8h2V6H9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-3">An Artisan</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">
+                        I create traditional crafts and want to reach more customers
+                    </p>
+                    <div class="text-accent-600 font-semibold text-body-sm">
+                        मैं एक कारीगर हूँ
+                    </div>
+                </div>
+
+                <!-- Buyer Path -->
+                <div class="cultural-card p-8 text-center cursor-pointer hover:ring-2 hover:ring-secondary-400 transition-cultural" onclick="selectUserType('buyer')">
+                    <div class="w-24 h-24 mx-auto mb-6 bg-secondary-100 rounded-full flex items-center justify-center">
+                        <svg class="h-12 w-12 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-3">A Buyer</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">
+                        I want to discover and buy authentic traditional crafts
+                    </p>
+                    <div class="text-secondary-600 font-semibold text-body-sm">
+                        मैं खरीदार हूँ
+                    </div>
+                </div>
+
+                <!-- Organization Path -->
+                <div class="cultural-card p-8 text-center cursor-pointer hover:ring-2 hover:ring-primary-400 transition-cultural" onclick="selectUserType('organization')">
+                    <div class="w-24 h-24 mx-auto mb-6 bg-primary-100 rounded-full flex items-center justify-center">
+                        <svg class="h-12 w-12 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-3">An Organization</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">
+                        I represent an NGO, cooperative, or cultural organization
+                    </p>
+                    <div class="text-primary-600 font-semibold text-body-sm">
+                        मैं संस्था का प्रतिनिधि हूँ
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Device Compatibility Check -->
+    <section class="py-16 bg-surface hidden" id="deviceCheckSection">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-heading font-headlines font-bold text-text-primary mb-4">
+                    Let's check your device
+                </h2>
+                <p class="text-body text-text-secondary">
+                    We'll make sure everything works perfectly on your device
+                </p>
+            </div>
+
+            <div class="cultural-card p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Device Detection -->
+                    <div class="space-y-6">
+                        <h3 class="text-subheading font-semibold text-text-primary">Device Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-success/10 rounded-full flex items-center justify-center">
+                                    <svg class="h-4 w-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-text-primary">Device Type</p>
+                                    <p class="text-body-sm text-text-secondary" id="deviceType">Detecting...</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-success/10 rounded-full flex items-center justify-center">
+                                    <svg class="h-4 w-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-text-primary">Browser</p>
+                                    <p class="text-body-sm text-text-secondary" id="browserInfo">Detecting...</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-success/10 rounded-full flex items-center justify-center">
+                                    <svg class="h-4 w-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-text-primary">Connection</p>
+                                    <p class="text-body-sm text-text-secondary" id="connectionSpeed">Testing...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Optimization Tips -->
+                    <div class="space-y-6">
+                        <h3 class="text-subheading font-semibold text-text-primary">Optimization Tips</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-primary-50 p-4 rounded-lg">
+                                <div class="flex items-start space-x-3">
+                                    <svg class="h-5 w-5 text-primary mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div>
+                                        <p class="font-medium text-primary">For best experience</p>
+                                        <p class="text-body-sm text-text-secondary">Use Chrome or Firefox browser for optimal performance</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-accent-50 p-4 rounded-lg">
+                                <div class="flex items-start space-x-3">
+                                    <svg class="h-5 w-5 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                    </svg>
+                                    <div>
+                                        <p class="font-medium text-accent">Photo quality</p>
+                                        <p class="text-body-sm text-text-secondary">Good lighting will help showcase your crafts better</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button onclick="proceedToOnboarding()" class="heritage-button">
+                        Continue Setup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artisan Onboarding Flow -->
+    <section class="py-16 bg-white hidden" id="artisanOnboardingSection">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Progress Indicator -->
+            <div class="mb-12">
+                <div class="flex items-center justify-center space-x-4 mb-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center text-white text-sm font-semibold">1</div>
+                        <span class="text-body-sm font-medium text-primary">Craft Type</span>
+                    </div>
+                    <div class="w-12 h-0.5 bg-gray-200"></div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-sm font-semibold">2</div>
+                        <span class="text-body-sm text-text-secondary">Region</span>
+                    </div>
+                    <div class="w-12 h-0.5 bg-gray-200"></div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-sm font-semibold">3</div>
+                        <span class="text-body-sm text-text-secondary">Voice Setup</span>
+                    </div>
+                    <div class="w-12 h-0.5 bg-gray-200"></div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-sm font-semibold">4</div>
+                        <span class="text-body-sm text-text-secondary">Photo Guide</span>
+                    </div>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div class="bg-primary-600 h-2 rounded-full transition-cultural" style="width: 25%" id="progressBar"></div>
+                </div>
+            </div>
+
+            <!-- Step 1: Craft Category Selection -->
+            <div id="craftCategoryStep" class="space-y-8">
+                <div class="text-center">
+                    <h2 class="text-heading font-headlines font-bold text-text-primary mb-4">
+                        What type of crafts do you create?
+                    </h2>
+                    <p class="text-body text-text-secondary">
+                        Select all that apply. We'll help you showcase each craft beautifully.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Pottery -->
+                    <div class="cultural-card p-6 text-center cursor-pointer hover:ring-2 hover:ring-accent-400 transition-cultural" onclick="selectCraft('pottery')">
+                        <div class="aspect-square rounded-lg overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Traditional pottery craft" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1139317/pexels-photo-1139317.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                        </div>
+                        <h3 class="font-semibold text-text-primary">Pottery</h3>
+                        <p class="text-body-sm text-accent-600">मिट्टी के बर्तन</p>
+                    </div>
+
+                    <!-- Textiles -->
+                    <div class="cultural-card p-6 text-center cursor-pointer hover:ring-2 hover:ring-accent-400 transition-cultural" onclick="selectCraft('textiles')">
+                        <div class="aspect-square rounded-lg overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Traditional textile weaving" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/03/29/04/47/industry-2185943_960_720.jpg'; this.onerror=null;" />
+                        </div>
+                        <h3 class="font-semibold text-text-primary">Textiles</h3>
+                        <p class="text-body-sm text-accent-600">वस्त्र</p>
+                    </div>
+
+                    <!-- Jewelry -->
+                    <div class="cultural-card p-6 text-center cursor-pointer hover:ring-2 hover:ring-accent-400 transition-cultural" onclick="selectCraft('jewelry')">
+                        <div class="aspect-square rounded-lg overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Traditional jewelry making" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                        </div>
+                        <h3 class="font-semibold text-text-primary">Jewelry</h3>
+                        <p class="text-body-sm text-accent-600">आभूषण</p>
+                    </div>
+
+                    <!-- Wood Carving -->
+                    <div class="cultural-card p-6 text-center cursor-pointer hover:ring-2 hover:ring-accent-400 transition-cultural" onclick="selectCraft('woodcarving')">
+                        <div class="aspect-square rounded-lg overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Traditional wood carving" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/29/05/07/wood-1867667_960_720.jpg'; this.onerror=null;" />
+                        </div>
+                        <h3 class="font-semibold text-text-primary">Wood Carving</h3>
+                        <p class="text-body-sm text-accent-600">लकड़ी की नक्काशी</p>
+                    </div>
+
+                    <!-- Metalwork -->
+                    <div class="cultural-card p-6 text-center cursor-pointer hover:ring-2 hover:ring-accent-400 transition-cultural" onclick="selectCraft('metalwork')">
+                        <div class="aspect-square rounded-lg overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Traditional metalwork" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                        </div>
+                        <h3 class="font-semibold text-text-primary">Metalwork</h3>
+                        <p class="text-body-sm text-accent-600">धातु का काम</p>
+                    </div>
+
+                    <!-- Painting -->
+                    <div class="cultural-card p-6 text-center cursor-pointer hover:ring-2 hover:ring-accent-400 transition-cultural" onclick="selectCraft('painting')">
+                        <div class="aspect-square rounded-lg overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Traditional painting art" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/09/25/13/12/colouring-pencils-2779452_960_720.jpg'; this.onerror=null;" />
+                        </div>
+                        <h3 class="font-semibold text-text-primary">Painting</h3>
+                        <p class="text-body-sm text-accent-600">चित्रकारी</p>
+                    </div>
+
+                    <!-- Leather Work -->
+                    <div class="cultural-card p-6 text-center cursor-pointer hover:ring-2 hover:ring-accent-400 transition-cultural" onclick="selectCraft('leather')">
+                        <div class="aspect-square rounded-lg overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Traditional leather work" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                        </div>
+                        <h3 class="font-semibold text-text-primary">Leather Work</h3>
+                        <p class="text-body-sm text-accent-600">चमड़े का काम</p>
+                    </div>
+
+                    <!-- Other -->
+                    <div class="cultural-card p-6 text-center cursor-pointer hover:ring-2 hover:ring-accent-400 transition-cultural" onclick="selectCraft('other')">
+                        <div class="aspect-square rounded-lg overflow-hidden mb-4 bg-surface flex items-center justify-center">
+                            <svg class="h-16 w-16 text-text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary">Other</h3>
+                        <p class="text-body-sm text-accent-600">अन्य</p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button onclick="nextStep()" class="heritage-button" id="craftNextBtn" disabled>
+                        Continue to Region Selection
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voice Setup Section -->
+    <section class="py-16 bg-surface hidden" id="voiceSetupSection">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-heading font-headlines font-bold text-text-primary mb-4">
+                    Let's set up voice assistance
+                </h2>
+                <p class="text-body text-text-secondary">
+                    Voice guidance will help you navigate the platform easily in your preferred language
+                </p>
+            </div>
+
+            <div class="cultural-card p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Voice Test -->
+                    <div class="space-y-6">
+                        <h3 class="text-subheading font-semibold text-text-primary">Microphone Test</h3>
+                        
+                        <div class="bg-primary-50 p-6 rounded-lg text-center">
+                            <div class="w-20 h-20 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center">
+                                <svg class="h-10 w-10 text-primary" fill="currentColor" viewBox="0 0 20 20" id="micIcon">
+                                    <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <p class="text-body font-medium text-text-primary mb-2">Click to test your microphone</p>
+                            <button onclick="testMicrophone()" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-cultural">
+                                Start Test
+                            </button>
+                        </div>
+
+                        <div id="micTestResult" class="hidden bg-success/10 p-4 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <svg class="h-5 w-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <p class="text-success font-medium">Microphone working perfectly!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Language Samples -->
+                    <div class="space-y-6">
+                        <h3 class="text-subheading font-semibold text-text-primary">Voice Samples</h3>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-3 bg-white rounded-lg border">
+                                <div>
+                                    <p class="font-medium text-text-primary">Hindi</p>
+                                    <p class="text-body-sm text-text-secondary">आपका स्वागत है</p>
+                                </div>
+                                <button onclick="playVoiceSample('hindi')" class="p-2 bg-primary-100 rounded-full hover:bg-primary-200 transition-cultural">
+                                    <svg class="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M8 5v10l7-5-7-5z"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 bg-white rounded-lg border">
+                                <div>
+                                    <p class="font-medium text-text-primary">English</p>
+                                    <p class="text-body-sm text-text-secondary">Welcome to KalaSaarthi</p>
+                                </div>
+                                <button onclick="playVoiceSample('english')" class="p-2 bg-primary-100 rounded-full hover:bg-primary-200 transition-cultural">
+                                    <svg class="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M8 5v10l7-5-7-5z"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 bg-white rounded-lg border">
+                                <div>
+                                    <p class="font-medium text-text-primary">Bengali</p>
+                                    <p class="text-body-sm text-text-secondary">কলাসারথিতে স্বাগতম</p>
+                                </div>
+                                <button onclick="playVoiceSample('bengali')" class="p-2 bg-primary-100 rounded-full hover:bg-primary-200 transition-cultural">
+                                    <svg class="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M8 5v10l7-5-7-5z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button onclick="completeVoiceSetup()" class="heritage-button">
+                        Complete Voice Setup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Tutorial Section -->
+    <section class="py-16 bg-white hidden" id="photoTutorialSection">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-heading font-headlines font-bold text-text-primary mb-4">
+                    Perfect photos for your crafts
+                </h2>
+                <p class="text-body text-text-secondary">
+                    Great photos help customers appreciate the beauty and quality of your work
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Good Examples -->
+                <div class="space-y-6">
+                    <h3 class="text-subheading font-semibold text-success">✓ Good Photos</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="cultural-card p-4">
+                            <div class="aspect-square rounded-lg overflow-hidden mb-3">
+                                <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Well-lit pottery example" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1139317/pexels-photo-1139317.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                            </div>
+                            <p class="text-body-sm text-success font-medium">Natural lighting, clear details</p>
+                        </div>
+
+                        <div class="cultural-card p-4">
+                            <div class="aspect-square rounded-lg overflow-hidden mb-3">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Clean background textile example" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/03/29/04/47/industry-2185943_960_720.jpg'; this.onerror=null;" />
+                            </div>
+                            <p class="text-body-sm text-success font-medium">Clean background, focused subject</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tips and Guidelines -->
+                <div class="space-y-6">
+                    <h3 class="text-subheading font-semibold text-text-primary">Photography Tips</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <div class="flex items-start space-x-3">
+                                <svg class="h-5 w-5 text-primary mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <p class="font-medium text-primary">Use natural light</p>
+                                    <p class="text-body-sm text-text-secondary">Take photos near a window during daytime</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-accent-50 p-4 rounded-lg">
+                            <div class="flex items-start space-x-3">
+                                <svg class="h-5 w-5 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                </svg>
+                                <div>
+                                    <p class="font-medium text-accent">Clean background</p>
+                                    <p class="text-body-sm text-text-secondary">Use a plain cloth or paper as background</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-secondary-50 p-4 rounded-lg">
+                            <div class="flex items-start space-x-3">
+                                <svg class="h-5 w-5 text-secondary mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <p class="font-medium text-secondary">Multiple angles</p>
+                                    <p class="text-body-sm text-text-secondary">Show different views of your craft</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <div class="flex items-start space-x-3">
+                                <svg class="h-5 w-5 text-primary mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <p class="font-medium text-primary">Show details</p>
+                                    <p class="text-body-sm text-text-secondary">Capture the intricate work and textures</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button onclick="completeOnboarding()" class="heritage-button">
+                            Complete Setup & Start Selling
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Celebration -->
+    <section class="py-16 bg-gradient-to-br from-primary-50 to-accent-50 hidden" id="successSection">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-celebration">
+                <div class="w-24 h-24 mx-auto mb-6 bg-success/10 rounded-full flex items-center justify-center">
+                    <svg class="h-12 w-12 text-success" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    Welcome to KalaSaarthi! 🎉
+                </h2>
+                <p class="text-hero font-headlines font-bold text-accent-600 mb-6 font-accents">
+                    आपका स्वागत है!
+                </p>
+                
+                <p class="text-body-lg text-text-secondary mb-8 max-w-2xl mx-auto">
+                    Your digital journey has begun! We're excited to help you share your beautiful crafts with the world.
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="cultural-card p-6">
+                        <div class="w-12 h-12 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center">
+                            <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary mb-2">Upload Your First Craft</h3>
+                        <p class="text-body-sm text-text-secondary">Start showcasing your beautiful work</p>
+                    </div>
+
+                    <div class="cultural-card p-6">
+                        <div class="w-12 h-12 mx-auto mb-4 bg-accent-100 rounded-full flex items-center justify-center">
+                            <svg class="h-6 w-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary mb-2">AI Story Creation</h3>
+                        <p class="text-body-sm text-text-secondary">Let AI help tell your craft's story</p>
+                    </div>
+
+                    <div class="cultural-card p-6">
+                        <div class="w-12 h-12 mx-auto mb-4 bg-secondary-100 rounded-full flex items-center justify-center">
+                            <svg class="h-6 w-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary mb-2">Connect with Buyers</h3>
+                        <p class="text-body-sm text-text-secondary">Reach customers worldwide</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="ai_assistant_demo.html" class="heritage-button">
+                        Try AI Assistant
+                    </a>
+                    <a href="cultural_heritage_showcase.html" class="border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-cultural">
+                        Explore Marketplace
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help & Support -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-heading font-headlines font-bold text-text-primary mb-4">
+                    Need Help? We're Here for You
+                </h2>
+                <p class="text-body text-text-secondary">
+                    24/7 support in your language, whenever you need assistance
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Video Tutorials -->
+                <div class="cultural-card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center">
+                        <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-3">Video Tutorials</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">
+                        Step-by-step guides in Hindi, English, and regional languages
+                    </p>
+                    <button onclick="openTutorials()" class="text-primary font-semibold hover:text-primary-700 transition-cultural">
+                        Watch Tutorials →
+                    </button>
+                </div>
+
+                <!-- Peer Mentors -->
+                <div class="cultural-card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-accent-100 rounded-full flex items-center justify-center">
+                        <svg class="h-8 w-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-3">Peer Mentors</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">
+                        Connect with successful artisans who can guide your journey
+                    </p>
+                    <button onclick="findMentor()" class="text-accent font-semibold hover:text-accent-700 transition-cultural">
+                        Find a Mentor →
+                    </button>
+                </div>
+
+                <!-- Live Support -->
+                <div class="cultural-card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-secondary-100 rounded-full flex items-center justify-center">
+                        <svg class="h-8 w-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-3">Live Support</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">
+                        Chat or call our support team anytime in your preferred language
+                    </p>
+                    <button onclick="startChat()" class="text-secondary font-semibold hover:text-secondary-700 transition-cultural">
+                        Start Chat →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <svg class="h-8 w-8 text-primary-400" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L28 10V18L20 26L12 18V10L20 2Z" fill="#6366F1"/>
+                            <path d="M20 8L24 12V16L20 20L16 16V12L20 8Z" fill="#F59E0B"/>
+                            <circle cx="20" cy="14" r="2" fill="white"/>
+                        </svg>
+                        <span class="ml-3 text-xl font-headlines font-bold">KalaSaarthi</span>
+                    </div>
+                    <p class="text-gray-300 text-body-sm">
+                        Technology that honors tradition. Empowering artisans, preserving culture.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="ai_assistant_demo.html" class="text-gray-300 hover:text-white transition-cultural">AI Assistant</a></li>
+                        <li><a href="artisan_success_stories.html" class="text-gray-300 hover:text-white transition-cultural">Success Stories</a></li>
+                        <li><a href="cultural_heritage_showcase.html" class="text-gray-300 hover:text-white transition-cultural">Heritage Showcase</a></li>
+                        <li><a href="get_started_hub.html" class="text-gray-300 hover:text-white transition-cultural">Get Started</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Digital Literacy</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Community Forum</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="partnership_portal.html" class="text-gray-300 hover:text-white transition-cultural">Partner With Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Cultural Ambassadors</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Volunteer Translators</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Media Kit</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-body-sm">
+                    © 2025 KalaSaarthi. All Rights Reserved. Made with ❤️ for Indian artisans.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Terms of Service</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Cultural Guidelines</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let currentUserType = '';
+        let selectedCrafts = [];
+        let currentStep = 1;
+        let selectedLanguage = 'en';
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Language change handler
+        function changeLanguage() {
+            const selector = document.getElementById('languageSelector');
+            selectedLanguage = selector.value;
+            console.log('Language changed to:', selectedLanguage);
+            // In real implementation, this would update all UI text
+        }
+
+        // Voice playback simulation
+        function playWelcomeVoice() {
+            console.log('Playing welcome voice in', selectedLanguage);
+            // In real implementation, this would use Web Speech API
+        }
+
+        function playVoiceSample(language) {
+            console.log('Playing voice sample in', language);
+            // In real implementation, this would play actual voice samples
+        }
+
+        // User type selection
+        function selectUserType(type) {
+            currentUserType = type;
+            console.log('Selected user type:', type);
+            
+            // Hide user type section and show device check
+            document.getElementById('userTypeSection').classList.add('hidden');
+            document.getElementById('deviceCheckSection').classList.remove('hidden');
+            
+            // Detect device information
+            detectDeviceInfo();
+        }
+
+        // Device detection
+        function detectDeviceInfo() {
+            // Simulate device detection
+            setTimeout(() => {
+                document.getElementById('deviceType').textContent = /Mobile|Android|iPhone/i.test(navigator.userAgent) ? 'Mobile Device' : 'Desktop Computer';
+                document.getElementById('browserInfo').textContent = navigator.userAgent.includes('Chrome') ? 'Chrome Browser' : 'Other Browser';
+                document.getElementById('connectionSpeed').textContent = 'Good Connection';
+            }, 1000);
+        }
+
+        // Proceed to onboarding
+        function proceedToOnboarding() {
+            document.getElementById('deviceCheckSection').classList.add('hidden');
+            
+            if (currentUserType === 'artisan') {
+                document.getElementById('artisanOnboardingSection').classList.remove('hidden');
+            } else if (currentUserType === 'buyer') {
+                // Redirect to heritage showcase for buyers
+                window.location.href = 'cultural_heritage_showcase.html';
+            } else if (currentUserType === 'organization') {
+                // Redirect to partnership portal for organizations
+                window.location.href = 'partnership_portal.html';
+            }
+        }
+
+        // Craft selection
+        function selectCraft(craftType) {
+            const craftCard = event.currentTarget;
+            
+            if (selectedCrafts.includes(craftType)) {
+                // Deselect
+                selectedCrafts = selectedCrafts.filter(c => c !== craftType);
+                craftCard.classList.remove('ring-2', 'ring-accent-400');
+            } else {
+                // Select
+                selectedCrafts.push(craftType);
+                craftCard.classList.add('ring-2', 'ring-accent-400');
+            }
+            
+            // Enable/disable next button
+            const nextBtn = document.getElementById('craftNextBtn');
+            if (selectedCrafts.length > 0) {
+                nextBtn.disabled = false;
+                nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            } else {
+                nextBtn.disabled = true;
+                nextBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        // Next step navigation
+        function nextStep() {
+            currentStep++;
+            updateProgressBar();
+            
+            if (currentStep === 2) {
+                // Skip region selection for demo and go to voice setup
+                currentStep = 3;
+                updateProgressBar();
+                showVoiceSetup();
+            }
+        }
+
+        // Update progress bar
+        function updateProgressBar() {
+            const progressBar = document.getElementById('progressBar');
+            const progress = (currentStep / 4) * 100;
+            progressBar.style.width = progress + '%';
+            
+            // Update step indicators
+            const steps = document.querySelectorAll('.w-8.h-8');
+            steps.forEach((step, index) => {
+                if (index < currentStep - 1) {
+                    step.className = 'w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center text-white text-sm font-semibold';
+                } else if (index === currentStep - 1) {
+                    step.className = 'w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center text-white text-sm font-semibold';
+                } else {
+                    step.className = 'w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-sm font-semibold';
+                }
+            });
+        }
+
+        // Show voice setup
+        function showVoiceSetup() {
+            document.getElementById('artisanOnboardingSection').classList.add('hidden');
+            document.getElementById('voiceSetupSection').classList.remove('hidden');
+        }
+
+        // Microphone test
+        function testMicrophone() {
+            console.log('Testing microphone...');
+            // Simulate microphone test
+            setTimeout(() => {
+                document.getElementById('micTestResult').classList.remove('hidden');
+            }, 2000);
+        }
+
+        // Complete voice setup
+        function completeVoiceSetup() {
+            currentStep = 4;
+            updateProgressBar();
+            document.getElementById('voiceSetupSection').classList.add('hidden');
+            document.getElementById('photoTutorialSection').classList.remove('hidden');
+        }
+
+        // Complete onboarding
+        function completeOnboarding() {
+            document.getElementById('photoTutorialSection').classList.add('hidden');
+            document.getElementById('successSection').classList.remove('hidden');
+            
+            // Scroll to success section
+            document.getElementById('successSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Help functions
+        function openTutorials() {
+            console.log('Opening video tutorials');
+            // In real implementation, this would open tutorial modal or page
+        }
+
+        function findMentor() {
+            console.log('Finding peer mentor');
+            // In real implementation, this would connect to mentor matching system
+        }
+
+        function startChat() {
+            console.log('Starting live chat');
+            // In real implementation, this would open chat widget
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Detect device capabilities
+            if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
+                console.log('Microphone access available');
+            }
+            
+            // Initialize progress bar
+            updateProgressBar();
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
