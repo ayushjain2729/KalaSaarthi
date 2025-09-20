@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partnership Portal - KalaSaarthi</title>
+    <meta name="description" content="Partner with KalaSaarthi to empower artisans and preserve cultural heritage. Collaborate with NGOs, cooperatives, cultural organizations, and government agencies." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fkalasaarth6818back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background font-body">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-cultural sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2L28 10V18L20 26L12 18V10L20 2Z" fill="#4F46E5"/>
+                        <path d="M20 8L24 12V16L20 20L16 16V12L20 8Z" fill="#F59E0B"/>
+                        <circle cx="20" cy="14" r="2" fill="white"/>
+                    </svg>
+                    <span class="ml-3 text-xl font-headlines font-bold text-text-primary">KalaSaarthi</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-cultural">Home</a>
+                    <a href="ai_assistant_demo.html" class="text-text-secondary hover:text-primary transition-cultural">AI Demo</a>
+                    <a href="artisan_success_stories.html" class="text-text-secondary hover:text-primary transition-cultural">Success Stories</a>
+                    <a href="cultural_heritage_showcase.html" class="text-text-secondary hover:text-primary transition-cultural">Heritage</a>
+                    <a href="partnership_portal.html" class="text-primary font-semibold">Partners</a>
+                    <a href="get_started_hub.html" class="heritage-button">Get Started</a>
+                </div>
+
+                <!-- Language Selector -->
+                <div class="flex items-center space-x-4">
+                    <select class="text-sm border border-gray-200 rounded-lg px-3 py-1 focus:ring-2 focus:ring-primary-500">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="ta">தமிழ்</option>
+                    </select>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden p-2 rounded-lg hover:bg-surface-100" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-3 space-y-3">
+                <a href="homepage.html" class="block text-text-secondary">Home</a>
+                <a href="ai_assistant_demo.html" class="block text-text-secondary">AI Demo</a>
+                <a href="artisan_success_stories.html" class="block text-text-secondary">Success Stories</a>
+                <a href="cultural_heritage_showcase.html" class="block text-text-secondary">Heritage</a>
+                <a href="partnership_portal.html" class="block text-primary font-semibold">Partners</a>
+                <a href="get_started_hub.html" class="block text-primary font-semibold">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary-50 to-accent-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-hero font-headlines font-bold text-text-primary mb-4">
+                    Partnership Portal
+                </h1>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto mb-8">
+                    Join us in empowering artisans and preserving cultural heritage through meaningful collaborations. Together, we can create sustainable impact across India's craft communities.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#apply" class="heritage-button">Apply for Partnership</a>
+                    <button onclick="scrollToSection('impact-metrics')" class="border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-cultural">
+                        View Impact Metrics
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Metrics Dashboard -->
+    <section id="impact-metrics" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    Partnership Impact Dashboard
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Real-time metrics showcasing the transformative power of our collaborative partnerships
+                </p>
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="cultural-card p-6 text-center">
+                    <div class="text-3xl font-bold text-primary-600 mb-2">47</div>
+                    <div class="text-body font-medium text-text-primary mb-1">Active Partnerships</div>
+                    <div class="text-body-sm text-text-secondary">NGOs, Cooperatives & Organizations</div>
+                </div>
+                <div class="cultural-card p-6 text-center">
+                    <div class="text-3xl font-bold text-secondary-600 mb-2">12,847</div>
+                    <div class="text-body font-medium text-text-primary mb-1">Artisans Empowered</div>
+                    <div class="text-body-sm text-text-secondary">Across 18 states</div>
+                </div>
+                <div class="cultural-card p-6 text-center">
+                    <div class="text-3xl font-bold text-accent-600 mb-2">₹2.4Cr</div>
+                    <div class="text-body font-medium text-text-primary mb-1">Economic Impact</div>
+                    <div class="text-body-sm text-text-secondary">Monthly revenue generated</div>
+                </div>
+                <div class="cultural-card p-6 text-center">
+                    <div class="text-3xl font-bold text-primary-600 mb-2">127</div>
+                    <div class="text-body font-medium text-text-primary mb-1">Cultural Traditions</div>
+                    <div class="text-body-sm text-text-secondary">Preserved & promoted</div>
+                </div>
+            </div>
+
+            <!-- Regional Impact Map -->
+            <div class="cultural-card p-8">
+                <h3 class="text-heading font-headlines font-semibold text-text-primary mb-6 text-center">
+                    Partnership Distribution Across India
+                </h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="space-y-4">
+                        <h4 class="text-subheading font-semibold text-text-primary">Northern Region</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-body-sm text-text-secondary">Rajasthan</span>
+                                <span class="text-body-sm font-semibold text-accent-600">8 partnerships</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-body-sm text-text-secondary">Punjab</span>
+                                <span class="text-body-sm font-semibold text-accent-600">5 partnerships</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-body-sm text-text-secondary">Uttar Pradesh</span>
+                                <span class="text-body-sm font-semibold text-accent-600">12 partnerships</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-subheading font-semibold text-text-primary">Eastern Region</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-body-sm text-text-secondary">West Bengal</span>
+                                <span class="text-body-sm font-semibold text-secondary-600">7 partnerships</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-body-sm text-text-secondary">Odisha</span>
+                                <span class="text-body-sm font-semibold text-secondary-600">4 partnerships</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-body-sm text-text-secondary">Jharkhand</span>
+                                <span class="text-body-sm font-semibold text-secondary-600">3 partnerships</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-subheading font-semibold text-text-primary">Southern Region</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-body-sm text-text-secondary">Karnataka</span>
+                                <span class="text-body-sm font-semibold text-primary-600">6 partnerships</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-body-sm text-text-secondary">Tamil Nadu</span>
+                                <span class="text-body-sm font-semibold text-primary-600">8 partnerships</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-body-sm text-text-secondary">Kerala</span>
+                                <span class="text-body-sm font-semibold text-primary-600">4 partnerships</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Categories -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    Partnership Categories
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Discover how your organization can collaborate with us to create meaningful impact
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- NGO Collaborations -->
+                <div class="cultural-card p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 bg-secondary-100 rounded-lg mr-4">
+                            <svg class="h-8 w-8 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-subheading font-semibold text-text-primary">NGO Collaborations</h3>
+                            <p class="text-body-sm text-text-secondary">Rural development & women's empowerment</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-secondary-500 rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">Community Integration</p>
+                                <p class="text-body-sm text-text-secondary">Seamless integration with existing rural development programs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-secondary-500 rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">Women's Empowerment</p>
+                                <p class="text-body-sm text-text-secondary">Focused programs for female artisan entrepreneurs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-secondary-500 rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">Capacity Building</p>
+                                <p class="text-body-sm text-text-secondary">Digital literacy and business skill development</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-secondary-50 rounded-lg">
+                        <p class="text-body-sm font-medium text-secondary-700">Success Story: SEWA Partnership</p>
+                        <p class="text-body-sm text-text-secondary">Empowered 2,400+ women artisans across Gujarat with 340% average income increase</p>
+                    </div>
+                </div>
+
+                <!-- Cooperative Integration -->
+                <div class="cultural-card p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 bg-accent-100 rounded-lg mr-4">
+                            <svg class="h-8 w-8 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-subheading font-semibold text-text-primary">Cooperative Integration</h3>
+                            <p class="text-body-sm text-text-secondary">Existing artisan groups & skill centers</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-accent-500 rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">Group Empowerment</p>
+                                <p class="text-body-sm text-text-secondary">Collective bargaining power and shared resources</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-accent-500 rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">Skill Development</p>
+                                <p class="text-body-sm text-text-secondary">Advanced training programs and certification</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-accent-500 rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">Market Access</p>
+                                <p class="text-body-sm text-text-secondary">Direct connection to global marketplaces</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-accent-50 rounded-lg">
+                        <p class="text-body-sm font-medium text-accent-700">Success Story: Rajasthan Craft Cooperative</p>
+                        <p class="text-body-sm text-text-secondary">15 cooperatives with 1,800+ artisans achieving 280% revenue growth</p>
+                    </div>
+                </div>
+
+                <!-- Cultural Organizations -->
+                <div class="cultural-card p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 bg-primary-100 rounded-lg mr-4">
+                            <svg class="h-8 w-8 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-subheading font-semibold text-text-primary">Cultural Organizations</h3>
+                            <p class="text-body-sm text-text-secondary">Museums & heritage foundations</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">Heritage Preservation</p>
+                                <p class="text-body-sm text-text-secondary">Digital documentation of traditional techniques</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">Cultural Education</p>
+                                <p class="text-body-sm text-text-secondary">Interactive learning experiences and workshops</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">Exhibition Partnerships</p>
+                                <p class="text-body-sm text-text-secondary">Showcase artisan work in cultural venues</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-primary-50 rounded-lg">
+                        <p class="text-body-sm font-medium text-primary-700">Success Story: National Museum Partnership</p>
+                        <p class="text-body-sm text-text-secondary">Documented 47 traditional crafts with 120+ master artisans</p>
+                    </div>
+                </div>
+
+                <!-- Government Programs -->
+                <div class="cultural-card p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 bg-success/10 rounded-lg mr-4">
+                            <svg class="h-8 w-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-subheading font-semibold text-text-primary">Government Programs</h3>
+                            <p class="text-body-sm text-text-secondary">Skill development & employment initiatives</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-success rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">PMKVY Integration</p>
+                                <p class="text-body-sm text-text-secondary">Pradhan Mantri Kaushal Vikas Yojana alignment</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-success rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">Rural Employment</p>
+                                <p class="text-body-sm text-text-secondary">MGNREGA and rural livelihood programs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-success rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-body font-medium text-text-primary">Digital India</p>
+                                <p class="text-body-sm text-text-secondary">Supporting digital literacy initiatives</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-success/5 rounded-lg">
+                        <p class="text-body-sm font-medium text-success">Success Story: Karnataka Skill Development</p>
+                        <p class="text-body-sm text-text-secondary">Trained 3,200+ artisans through government partnership programs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Process -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    Partnership Process
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Our structured approach ensures successful collaboration and measurable impact
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-primary-600">1</span>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Application</h3>
+                    <p class="text-body-sm text-text-secondary">Submit partnership proposal with project scope and expected outcomes</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="bg-secondary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-secondary-600">2</span>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Evaluation</h3>
+                    <p class="text-body-sm text-text-secondary">Comprehensive assessment of alignment, impact potential, and resource requirements</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="bg-accent-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-accent-600">3</span>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Pilot Program</h3>
+                    <p class="text-body-sm text-text-secondary">3-month pilot with selected artisan communities to validate approach</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="bg-success/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-success">4</span>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Scale & Measure</h3>
+                    <p class="text-body-sm text-text-secondary">Full implementation with continuous impact measurement and optimization</p>
+                </div>
+            </div>
+
+            <!-- Evaluation Criteria -->
+            <div class="mt-16 cultural-card p-8">
+                <h3 class="text-heading font-headlines font-semibold text-text-primary mb-6 text-center">
+                    Partnership Evaluation Criteria
+                </h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="space-y-3">
+                        <h4 class="text-subheading font-semibold text-primary-600">Mission Alignment</h4>
+                        <ul class="space-y-2 text-body-sm text-text-secondary">
+                            <li>• Cultural preservation commitment</li>
+                            <li>• Artisan empowerment focus</li>
+                            <li>• Sustainable development goals</li>
+                            <li>• Community-centric approach</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="text-subheading font-semibold text-secondary-600">Impact Potential</h4>
+                        <ul class="space-y-2 text-body-sm text-text-secondary">
+                            <li>• Number of artisans reached</li>
+                            <li>• Geographic coverage</li>
+                            <li>• Economic impact projections</li>
+                            <li>• Cultural preservation scope</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="text-subheading font-semibold text-accent-600">Resource Capacity</h4>
+                        <ul class="space-y-2 text-body-sm text-text-secondary">
+                            <li>• Technical infrastructure</li>
+                            <li>• Human resource availability</li>
+                            <li>• Financial sustainability</li>
+                            <li>• Long-term commitment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Library -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    Resource Library
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Comprehensive resources to support successful partnership implementation
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Training Materials -->
+                <div class="cultural-card p-6">
+                    <div class="bg-primary-100 rounded-lg p-4 mb-4">
+                        <svg class="h-8 w-8 text-primary-600 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Training Materials</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">Comprehensive guides for artisan onboarding and digital literacy</p>
+                    <ul class="space-y-1 text-body-sm text-text-secondary">
+                        <li>• Voice-guided tutorials</li>
+                        <li>• Multilingual resources</li>
+                        <li>• Video demonstrations</li>
+                        <li>• Assessment tools</li>
+                    </ul>
+                </div>
+
+                <!-- Cultural Guidelines -->
+                <div class="cultural-card p-6">
+                    <div class="bg-secondary-100 rounded-lg p-4 mb-4">
+                        <svg class="h-8 w-8 text-secondary-600 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Cultural Guidelines</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">Best practices for culturally sensitive engagement</p>
+                    <ul class="space-y-1 text-body-sm text-text-secondary">
+                        <li>• Respect protocols</li>
+                        <li>• Communication styles</li>
+                        <li>• Traditional practices</li>
+                        <li>• Community dynamics</li>
+                    </ul>
+                </div>
+
+                <!-- Impact Measurement -->
+                <div class="cultural-card p-6">
+                    <div class="bg-accent-100 rounded-lg p-4 mb-4">
+                        <svg class="h-8 w-8 text-accent-600 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Impact Tools</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">Metrics and measurement frameworks for tracking success</p>
+                    <ul class="space-y-1 text-body-sm text-text-secondary">
+                        <li>• KPI dashboards</li>
+                        <li>• Survey templates</li>
+                        <li>• Reporting formats</li>
+                        <li>• Analytics tools</li>
+                    </ul>
+                </div>
+
+                <!-- Technical Documentation -->
+                <div class="cultural-card p-6">
+                    <div class="bg-success/10 rounded-lg p-4 mb-4">
+                        <svg class="h-8 w-8 text-success mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Technical Docs</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">API documentation and integration guides</p>
+                    <ul class="space-y-1 text-body-sm text-text-secondary">
+                        <li>• API specifications</li>
+                        <li>• Integration guides</li>
+                        <li>• Security protocols</li>
+                        <li>• Support channels</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <button onclick="downloadResources()" class="heritage-button">
+                    Download Resource Pack
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Portal -->
+    <section id="apply" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    Partnership Application
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Ready to create impact together? Submit your partnership proposal and connect with our dedicated relationship managers.
+                </p>
+            </div>
+
+            <div class="cultural-card p-8">
+                <form id="partnershipForm" class="space-y-6">
+                    <!-- Organization Details -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="orgName" class="block text-body font-medium text-text-primary mb-2">Organization Name *</label>
+                            <input type="text" id="orgName" name="orgName" required class="cultural-input" />
+                        </div>
+                        <div>
+                            <label for="orgType" class="block text-body font-medium text-text-primary mb-2">Organization Type *</label>
+                            <select id="orgType" name="orgType" required class="cultural-input">
+                                <option value>Select type</option>
+                                <option value="ngo">NGO</option>
+                                <option value="cooperative">Cooperative</option>
+                                <option value="cultural">Cultural Organization</option>
+                                <option value="government">Government Agency</option>
+                                <option value="corporate">Corporate CSR</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="contactName" class="block text-body font-medium text-text-primary mb-2">Primary Contact *</label>
+                            <input type="text" id="contactName" name="contactName" required class="cultural-input" />
+                        </div>
+                        <div>
+                            <label for="contactEmail" class="block text-body font-medium text-text-primary mb-2">Email Address *</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required class="cultural-input" />
+                        </div>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div>
+                        <label for="projectScope" class="block text-body font-medium text-text-primary mb-2">Project Scope & Objectives *</label>
+                        <textarea id="projectScope" name="projectScope" rows="4" required class="cultural-input" placeholder="Describe your project goals, target artisan communities, and expected outcomes..."></textarea>
+                    </div>
+
+                    <!-- Geographic Focus -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="states" class="block text-body font-medium text-text-primary mb-2">Target States/Regions *</label>
+                            <input type="text" id="states" name="states" required class="cultural-input" placeholder="e.g., Rajasthan, West Bengal" />
+                        </div>
+                        <div>
+                            <label for="artisanCount" class="block text-body font-medium text-text-primary mb-2">Expected Artisans Reached</label>
+                            <input type="number" id="artisanCount" name="artisanCount" class="cultural-input" placeholder="Estimated number" />
+                        </div>
+                    </div>
+
+                    <!-- Resources & Timeline -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="resources" class="block text-body font-medium text-text-primary mb-2">Available Resources</label>
+                            <textarea id="resources" name="resources" rows="3" class="cultural-input" placeholder="Human resources, funding, infrastructure..."></textarea>
+                        </div>
+                        <div>
+                            <label for="timeline" class="block text-body font-medium text-text-primary mb-2">Proposed Timeline</label>
+                            <input type="text" id="timeline" name="timeline" class="cultural-input" placeholder="e.g., 6 months pilot, 2 years full implementation" />
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div>
+                        <label for="additionalInfo" class="block text-body font-medium text-text-primary mb-2">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="3" class="cultural-input" placeholder="Previous experience, specific requirements, questions..."></textarea>
+                    </div>
+
+                    <!-- Consent & Agreement -->
+                    <div class="space-y-3">
+                        <label class="flex items-start space-x-3">
+                            <input type="checkbox" required class="mt-1 rounded border-gray-300 text-primary-600 focus:ring-primary-500" />
+                            <span class="text-body-sm text-text-secondary">I agree to the partnership terms and cultural sensitivity guidelines</span>
+                        </label>
+                        <label class="flex items-start space-x-3">
+                            <input type="checkbox" class="mt-1 rounded border-gray-300 text-primary-600 focus:ring-primary-500" />
+                            <span class="text-body-sm text-text-secondary">I would like to receive updates about KalaSaarthi partnerships and impact stories</span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center pt-6">
+                        <button type="submit" class="heritage-button w-full md:w-auto">
+                            Submit Partnership Application
+                        </button>
+                        <p class="text-body-sm text-text-secondary mt-3">
+                            Our team will review your application within 5-7 business days
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Highlight -->
+    <section class="py-16 bg-gradient-to-r from-primary-600 to-primary-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-white mb-4">
+                    Partnership Success Stories
+                </h2>
+                <p class="text-body-lg text-primary-100 max-w-3xl mx-auto">
+                    Discover how our partnerships are creating transformative impact across India's artisan communities
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- SEWA Partnership -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-heritage p-6">
+                    <div class="aspect-square rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="SEWA women artisans working together" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1139317/pexels-photo-1139317.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                    </div>
+                    <h3 class="text-subheading font-semibold text-white mb-2">SEWA Gujarat</h3>
+                    <p class="text-body-sm text-primary-100 mb-3">Empowering 2,400+ women artisans across 47 villages</p>
+                    <div class="space-y-1 text-body-sm text-primary-100">
+                        <div class="flex justify-between">
+                            <span>Income Increase:</span>
+                            <span class="font-semibold">340%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Digital Adoption:</span>
+                            <span class="font-semibold">89%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Market Reach:</span>
+                            <span class="font-semibold">12 countries</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Government Partnership -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-heritage p-6">
+                    <div class="aspect-square rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Government skill development program" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/03/29/04/47/industry-2185943_960_720.jpg'; this.onerror=null;" />
+                    </div>
+                    <h3 class="text-subheading font-semibold text-white mb-2">Karnataka Skill Development</h3>
+                    <p class="text-body-sm text-primary-100 mb-3">Government partnership across 8 districts</p>
+                    <div class="space-y-1 text-body-sm text-primary-100">
+                        <div class="flex justify-between">
+                            <span>Artisans Trained:</span>
+                            <span class="font-semibold">3,200+</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Employment Rate:</span>
+                            <span class="font-semibold">94%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Certification:</span>
+                            <span class="font-semibold">PMKVY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cultural Organization -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-heritage p-6">
+                    <div class="aspect-square rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Cultural heritage documentation project" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/08/01/11/48/pottery-2564975_960_720.jpg'; this.onerror=null;" />
+                    </div>
+                    <h3 class="text-subheading font-semibold text-white mb-2">National Museum</h3>
+                    <p class="text-body-sm text-primary-100 mb-3">Heritage documentation & preservation project</p>
+                    <div class="space-y-1 text-body-sm text-primary-100">
+                        <div class="flex justify-between">
+                            <span>Crafts Documented:</span>
+                            <span class="font-semibold">47</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Master Artisans:</span>
+                            <span class="font-semibold">120+</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Digital Archive:</span>
+                            <span class="font-semibold">2,400 items</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="artisan_success_stories.html" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-cultural">
+                    View All Success Stories
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <svg class="h-8 w-8 text-primary-400" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L28 10V18L20 26L12 18V10L20 2Z" fill="#6366F1"/>
+                            <path d="M20 8L24 12V16L20 20L16 16V12L20 8Z" fill="#F59E0B"/>
+                            <circle cx="20" cy="14" r="2" fill="white"/>
+                        </svg>
+                        <span class="ml-3 text-xl font-headlines font-bold">KalaSaarthi</span>
+                    </div>
+                    <p class="text-gray-300 text-body-sm">
+                        Technology that honors tradition. Empowering artisans, preserving culture.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="ai_assistant_demo.html" class="text-gray-300 hover:text-white transition-cultural">AI Assistant</a></li>
+                        <li><a href="artisan_success_stories.html" class="text-gray-300 hover:text-white transition-cultural">Success Stories</a></li>
+                        <li><a href="cultural_heritage_showcase.html" class="text-gray-300 hover:text-white transition-cultural">Heritage Showcase</a></li>
+                        <li><a href="get_started_hub.html" class="text-gray-300 hover:text-white transition-cultural">Get Started</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Digital Literacy</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Community Forum</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="partnership_portal.html" class="text-gray-300 hover:text-white transition-cultural">Partner With Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Cultural Ambassadors</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Volunteer Translators</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Media Kit</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-body-sm">
+                    © 2025 KalaSaarthi. All Rights Reserved. Made with ❤️ for Indian artisans.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Terms of Service</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Cultural Guidelines</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Form submission
+        document.getElementById('partnershipForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const formData = new FormData(this);
+            const orgName = formData.get('orgName');
+            
+            // Simulate form submission
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+            
+            setTimeout(() => {
+                alert(`Thank you, ${orgName}! Your partnership application has been submitted successfully. Our team will review it within 5-7 business days and contact you at ${formData.get('contactEmail')}.`);
+                
+                // Reset form
+                this.reset();
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 2000);
+        });
+
+        // Resource download simulation
+        function downloadResources() {
+            // Simulate resource pack download
+            const button = event.target;
+            const originalText = button.textContent;
+            
+            button.textContent = 'Preparing Download...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                alert('Resource pack download started! The comprehensive partnership toolkit includes training materials, cultural guidelines, impact measurement tools, and technical documentation.');
+                
+                button.textContent = originalText;
+                button.disabled = false;
+            }, 1500);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.cultural-card, section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
