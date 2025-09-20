@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cultural Heritage Showcase - KalaSaarthi</title>
+    <meta name="description" content="Explore India's rich craft traditions through an immersive digital museum. Discover ancient techniques, meet master artisans, and connect with contemporary craftspeople preserving cultural heritage." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fkalasaarth6818back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background font-body">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-cultural sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2L28 10V18L20 26L12 18V10L20 2Z" fill="#4F46E5"/>
+                        <path d="M20 8L24 12V16L20 20L16 16V12L20 8Z" fill="#F59E0B"/>
+                        <circle cx="20" cy="14" r="2" fill="white"/>
+                    </svg>
+                    <span class="ml-3 text-xl font-headlines font-bold text-text-primary">KalaSaarthi</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-cultural">Home</a>
+                    <a href="ai_assistant_demo.html" class="text-text-secondary hover:text-primary transition-cultural">AI Demo</a>
+                    <a href="artisan_success_stories.html" class="text-text-secondary hover:text-primary transition-cultural">Success Stories</a>
+                    <a href="cultural_heritage_showcase.html" class="text-primary font-semibold">Heritage</a>
+                    <a href="partnership_portal.html" class="text-text-secondary hover:text-primary transition-cultural">Partners</a>
+                    <a href="get_started_hub.html" class="heritage-button">Get Started</a>
+                </div>
+
+                <!-- Language Selector -->
+                <div class="flex items-center space-x-4">
+                    <select class="text-sm border border-gray-200 rounded-lg px-3 py-1 focus:ring-2 focus:ring-primary-500">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="ta">தமிழ்</option>
+                    </select>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden p-2 rounded-lg hover:bg-surface-100" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-3 space-y-3">
+                <a href="homepage.html" class="block text-text-secondary">Home</a>
+                <a href="ai_assistant_demo.html" class="block text-text-secondary">AI Demo</a>
+                <a href="artisan_success_stories.html" class="block text-text-secondary">Success Stories</a>
+                <a href="cultural_heritage_showcase.html" class="block text-primary font-semibold">Heritage</a>
+                <a href="partnership_portal.html" class="block text-text-secondary">Partners</a>
+                <a href="get_started_hub.html" class="block text-primary font-semibold">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-accent-50 to-primary-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-hero font-headlines font-bold text-text-primary mb-4">
+                    India's Living Heritage
+                </h1>
+                <p class="text-hero font-headlines font-bold text-accent-600 leading-tight font-accents mb-6">
+                    भारत की जीवंत विरासत
+                </p>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Journey through millennia of craftsmanship, from ancient Indus Valley pottery to contemporary innovations. Discover the stories, techniques, and cultural significance behind India's most treasured craft traditions.
+                </p>
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button onclick="scrollToSection('timeline')" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold shadow-cultural hover:shadow-medium transition-cultural">
+                    Historical Timeline
+                </button>
+                <button onclick="scrollToSection('regional')" class="bg-white text-secondary px-6 py-3 rounded-lg font-semibold shadow-cultural hover:shadow-medium transition-cultural">
+                    Regional Explorer
+                </button>
+                <button onclick="scrollToSection('techniques')" class="bg-white text-accent px-6 py-3 rounded-lg font-semibold shadow-cultural hover:shadow-medium transition-cultural">
+                    Craft Techniques
+                </button>
+                <button onclick="scrollToSection('living')" class="bg-white text-text-primary px-6 py-3 rounded-lg font-semibold shadow-cultural hover:shadow-medium transition-cultural">
+                    Living Heritage
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timeline Section -->
+    <section id="timeline" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    5000 Years of Craftsmanship
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Explore the evolution of Indian crafts through the ages, from ancient civilizations to modern innovations
+                </p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary-600 to-accent-600 h-full"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-16">
+                    <!-- Indus Valley Period -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="cultural-card p-6 cursor-pointer" onclick="showTimelineDetail('indus')">
+                                <h3 class="text-subheading font-semibold text-text-primary mb-2">3300-1300 BCE</h3>
+                                <h4 class="text-heading font-headlines font-bold text-primary mb-3">Indus Valley Civilization</h4>
+                                <p class="text-body text-text-secondary mb-4">Advanced pottery, bronze work, and urban planning. Sophisticated drainage systems and standardized weights.</p>
+                                <div class="aspect-video rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Ancient Indus Valley pottery" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1139317/pexels-photo-1139317.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-cultural"></div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+
+                    <!-- Vedic Period -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent-600 rounded-full border-4 border-white shadow-cultural"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="cultural-card p-6 cursor-pointer" onclick="showTimelineDetail('vedic')">
+                                <h3 class="text-subheading font-semibold text-text-primary mb-2">1500-500 BCE</h3>
+                                <h4 class="text-heading font-headlines font-bold text-accent mb-3">Vedic Period</h4>
+                                <p class="text-body text-text-secondary mb-4">Sacred geometry in temple architecture, ritual bronze vessels, and textile weaving traditions established.</p>
+                                <div class="aspect-video rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Ancient Indian bronze work" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/08/01/11/48/pottery-2564975_960_720.jpg'; this.onerror=null;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mughal Era -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="cultural-card p-6 cursor-pointer" onclick="showTimelineDetail('mughal')">
+                                <h3 class="text-subheading font-semibold text-text-primary mb-2">1526-1857 CE</h3>
+                                <h4 class="text-heading font-headlines font-bold text-secondary mb-3">Mughal Empire</h4>
+                                <p class="text-body text-text-secondary mb-4">Intricate miniature paintings, marble inlay work, carpet weaving, and jewelry craftsmanship flourished.</p>
+                                <div class="aspect-video rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Mughal era textile craftsmanship" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary-600 rounded-full border-4 border-white shadow-cultural"></div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+
+                    <!-- Modern Era -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-cultural"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="cultural-card p-6 cursor-pointer" onclick="showTimelineDetail('modern')">
+                                <h3 class="text-subheading font-semibold text-text-primary mb-2">2000-Present</h3>
+                                <h4 class="text-heading font-headlines font-bold text-primary mb-3">Digital Renaissance</h4>
+                                <p class="text-body text-text-secondary mb-4">AI-powered platforms connecting traditional artisans with global markets while preserving authentic techniques.</p>
+                                <div class="aspect-video rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Modern digital craft marketplace" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/03/29/04/47/industry-2185943_960_720.jpg'; this.onerror=null;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Craft Explorer -->
+    <section id="regional" class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    Regional Craft Specialties
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Discover the unique craft traditions that define each region of India
+                </p>
+            </div>
+
+            <!-- Interactive Map -->
+            <div class="relative bg-white rounded-heritage p-8 mb-12">
+                <div class="relative mx-auto max-w-4xl">
+                    <svg viewBox="0 0 500 400" class="w-full h-auto">
+                        <!-- Simplified India outline -->
+                        <path d="M100 50 L400 50 L420 100 L410 160 L390 200 L370 240 L350 280 L320 320 L280 340 L240 350 L200 340 L160 320 L130 280 L110 240 L90 200 L80 160 L85 100 Z" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="2"/>
+                        
+                        <!-- Regional Craft Hotspots -->
+                        <!-- Rajasthan -->
+                        <circle cx="180" cy="140" r="12" fill="#F59E0B" class="animate-pulse cursor-pointer" onclick="showRegionalCraft('rajasthan')"/>
+                        <text x="180" y="125" text-anchor="middle" class="text-xs font-semibold fill-text-primary">Rajasthan</text>
+                        
+                        <!-- Kashmir -->
+                        <circle cx="200" cy="80" r="10" fill="#4F46E5" class="animate-pulse cursor-pointer" onclick="showRegionalCraft('kashmir')"/>
+                        <text x="200" y="70" text-anchor="middle" class="text-xs font-semibold fill-text-primary">Kashmir</text>
+                        
+                        <!-- West Bengal -->
+                        <circle cx="320" cy="180" r="11" fill="#10B981" class="animate-pulse cursor-pointer" onclick="showRegionalCraft('bengal')"/>
+                        <text x="320" y="170" text-anchor="middle" class="text-xs font-semibold fill-text-primary">Bengal</text>
+                        
+                        <!-- Tamil Nadu -->
+                        <circle cx="280" cy="280" r="10" fill="#DC2626" class="animate-pulse cursor-pointer" onclick="showRegionalCraft('tamil')"/>
+                        <text x="280" y="270" text-anchor="middle" class="text-xs font-semibold fill-text-primary">Tamil Nadu</text>
+                        
+                        <!-- Gujarat -->
+                        <circle cx="150" cy="160" r="9" fill="#7C3AED" class="animate-pulse cursor-pointer" onclick="showRegionalCraft('gujarat')"/>
+                        <text x="150" y="150" text-anchor="middle" class="text-xs font-semibold fill-text-primary">Gujarat</text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Regional Craft Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Rajasthani Block Printing -->
+                <div class="cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Rajasthani block printing artisan at work" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Rajasthani Block Printing</h3>
+                    <p class="text-body text-text-secondary mb-4">Hand-carved wooden blocks create intricate patterns on cotton and silk fabrics using natural dyes.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-accent-600 font-semibold">247 Active Artisans</span>
+                        <button onclick="exploreRegion('rajasthan')" class="text-primary hover:text-primary-700 font-semibold text-body-sm">
+                            Explore →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Kashmiri Papier-Mâché -->
+                <div class="cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Kashmiri papier-mâché craftwork" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/08/01/11/48/pottery-2564975_960_720.jpg'; this.onerror=null;" />
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Kashmiri Papier-Mâché</h3>
+                    <p class="text-body text-text-secondary mb-4">Delicate paper pulp molded into decorative items with intricate Persian-influenced paintings.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-primary-600 font-semibold">89 Active Artisans</span>
+                        <button onclick="exploreRegion('kashmir')" class="text-primary hover:text-primary-700 font-semibold text-body-sm">
+                            Explore →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bengali Kantha Embroidery -->
+                <div class="cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bengali kantha embroidery detail" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Bengali Kantha Embroidery</h3>
+                    <p class="text-body text-text-secondary mb-4">Running stitch embroidery creating beautiful quilts and garments with storytelling motifs.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-secondary-600 font-semibold">156 Active Artisans</span>
+                        <button onclick="exploreRegion('bengal')" class="text-primary hover:text-primary-700 font-semibold text-body-sm">
+                            Explore →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tamil Bronze Casting -->
+                <div class="cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Tamil bronze casting process" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1139317/pexels-photo-1139317.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Tamil Bronze Casting</h3>
+                    <p class="text-body text-text-secondary mb-4">Lost-wax casting technique creating exquisite bronze sculptures and temple deities.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-error font-semibold">73 Active Artisans</span>
+                        <button onclick="exploreRegion('tamil')" class="text-primary hover:text-primary-700 font-semibold text-body-sm">
+                            Explore →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gujarati Mirror Work -->
+                <div class="cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Gujarati mirror work embroidery" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/03/29/04/47/industry-2185943_960_720.jpg'; this.onerror=null;" />
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Gujarati Mirror Work</h3>
+                    <p class="text-body text-text-secondary mb-4">Shisha embroidery incorporating small mirrors into colorful textile designs.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-purple-600 font-semibold">198 Active Artisans</span>
+                        <button onclick="exploreRegion('gujarat')" class="text-primary hover:text-primary-700 font-semibold text-body-sm">
+                            Explore →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Odisha Palm Leaf Art -->
+                <div class="cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Odisha palm leaf manuscript art" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Odisha Palm Leaf Art</h3>
+                    <p class="text-body text-text-secondary mb-4">Ancient manuscript tradition using palm leaves with intricate etchings and natural pigments.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-accent-600 font-semibold">42 Active Artisans</span>
+                        <button onclick="exploreRegion('odisha')" class="text-primary hover:text-primary-700 font-semibold text-body-sm">
+                            Explore →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Craft Techniques Library -->
+    <section id="techniques" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    Master Craft Techniques
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Step-by-step exploration of traditional techniques with 360-degree views and expert guidance
+                </p>
+            </div>
+
+            <!-- Technique Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button onclick="filterTechniques('all')" class="technique-filter active bg-primary text-white px-6 py-3 rounded-lg font-semibold transition-cultural">
+                    All Techniques
+                </button>
+                <button onclick="filterTechniques('textile')" class="technique-filter bg-white text-text-primary border border-gray-200 px-6 py-3 rounded-lg font-semibold hover:bg-surface transition-cultural">
+                    Textiles
+                </button>
+                <button onclick="filterTechniques('pottery')" class="technique-filter bg-white text-text-primary border border-gray-200 px-6 py-3 rounded-lg font-semibold hover:bg-surface transition-cultural">
+                    Pottery
+                </button>
+                <button onclick="filterTechniques('metalwork')" class="technique-filter bg-white text-text-primary border border-gray-200 px-6 py-3 rounded-lg font-semibold hover:bg-surface transition-cultural">
+                    Metalwork
+                </button>
+                <button onclick="filterTechniques('woodwork')" class="technique-filter bg-white text-text-primary border border-gray-200 px-6 py-3 rounded-lg font-semibold hover:bg-surface transition-cultural">
+                    Woodwork
+                </button>
+            </div>
+
+            <!-- Technique Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Block Printing Technique -->
+                <div class="technique-card textile cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Block printing technique demonstration" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-cultural">
+                            <button onclick="openTechniqueDemo('block-printing')" class="bg-white text-primary px-4 py-2 rounded-lg font-semibold">
+                                View 360° Demo
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Block Printing Process</h3>
+                    <p class="text-body text-text-secondary mb-4">Learn the traditional method of hand-block printing using carved wooden blocks and natural dyes.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-accent-600 font-semibold">8 Steps</span>
+                        <span class="text-body-sm text-text-secondary">15 min read</span>
+                    </div>
+                </div>
+
+                <!-- Pottery Wheel Technique -->
+                <div class="technique-card pottery cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Potter working on wheel" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1139317/pexels-photo-1139317.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-cultural">
+                            <button onclick="openTechniqueDemo('pottery-wheel')" class="bg-white text-primary px-4 py-2 rounded-lg font-semibold">
+                                View 360° Demo
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Pottery Wheel Mastery</h3>
+                    <p class="text-body text-text-secondary mb-4">Master the ancient art of shaping clay on the potter's wheel with traditional techniques.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-secondary-600 font-semibold">12 Steps</span>
+                        <span class="text-body-sm text-text-secondary">20 min read</span>
+                    </div>
+                </div>
+
+                <!-- Bronze Casting Technique -->
+                <div class="technique-card metalwork cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bronze casting process" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/08/01/11/48/pottery-2564975_960_720.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-cultural">
+                            <button onclick="openTechniqueDemo('bronze-casting')" class="bg-white text-primary px-4 py-2 rounded-lg font-semibold">
+                                View 360° Demo
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Lost-Wax Bronze Casting</h3>
+                    <p class="text-body text-text-secondary mb-4">Discover the intricate process of creating bronze sculptures using the ancient lost-wax method.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-error font-semibold">15 Steps</span>
+                        <span class="text-body-sm text-text-secondary">25 min read</span>
+                    </div>
+                </div>
+
+                <!-- Wood Carving Technique -->
+                <div class="technique-card woodwork cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Traditional wood carving" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-cultural">
+                            <button onclick="openTechniqueDemo('wood-carving')" class="bg-white text-primary px-4 py-2 rounded-lg font-semibold">
+                                View 360° Demo
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Traditional Wood Carving</h3>
+                    <p class="text-body text-text-secondary mb-4">Learn the fundamental techniques of wood carving used in temple architecture and decorative arts.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-purple-600 font-semibold">10 Steps</span>
+                        <span class="text-body-sm text-text-secondary">18 min read</span>
+                    </div>
+                </div>
+
+                <!-- Embroidery Technique -->
+                <div class="technique-card textile cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Traditional embroidery work" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/03/29/04/47/industry-2185943_960_720.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-cultural">
+                            <button onclick="openTechniqueDemo('embroidery')" class="bg-white text-primary px-4 py-2 rounded-lg font-semibold">
+                                View 360° Demo
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Kantha Embroidery</h3>
+                    <p class="text-body text-text-secondary mb-4">Master the running stitch technique that creates beautiful storytelling quilts and garments.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-accent-600 font-semibold">6 Steps</span>
+                        <span class="text-body-sm text-text-secondary">12 min read</span>
+                    </div>
+                </div>
+
+                <!-- Jewelry Making Technique -->
+                <div class="technique-card metalwork cultural-card p-6">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Traditional jewelry making" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-cultural">
+                            <button onclick="openTechniqueDemo('jewelry-making')" class="bg-white text-primary px-4 py-2 rounded-lg font-semibold">
+                                View 360° Demo
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Kundan Jewelry Craft</h3>
+                    <p class="text-body text-text-secondary mb-4">Explore the intricate art of setting gemstones in gold using traditional Kundan techniques.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-body-sm text-secondary-600 font-semibold">14 Steps</span>
+                        <span class="text-body-sm text-text-secondary">22 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Living Heritage Section -->
+    <section id="living" class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    Living Heritage Masters
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Meet the master craftspeople preserving ancient traditions and passing knowledge to the next generation
+                </p>
+            </div>
+
+            <!-- Master Artisan Profiles -->
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Master Profile 1 -->
+                <div class="cultural-card p-8">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Master artisan Ramesh Chandra" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1139317/pexels-photo-1139317.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-subheading font-semibold text-text-primary mb-2">Master Ramesh Chandra</h3>
+                            <p class="text-body text-accent-600 font-semibold mb-3">Block Printing Master • Rajasthan</p>
+                            <p class="text-body text-text-secondary mb-4">
+                                "For 45 years, I have carved stories into wood and printed dreams onto fabric. Now, through KalaSaarthi, my grandson learns not just the craft, but how to share our heritage with the world."
+                            </p>
+                            <div class="flex items-center space-x-4 text-body-sm text-text-secondary">
+                                <span>45 years experience</span>
+                                <span>•</span>
+                                <span>12 apprentices trained</span>
+                                <span>•</span>
+                                <span>3rd generation craftsman</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Knowledge Transfer Progress -->
+                    <div class="mt-6 p-4 bg-accent-50 rounded-lg">
+                        <h4 class="font-semibold text-text-primary mb-3">Knowledge Transfer Progress</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-body-sm">
+                                <span>Traditional Techniques</span>
+                                <span class="text-accent-600 font-semibold">100%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent-600 h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                            <div class="flex justify-between text-body-sm">
+                                <span>Digital Documentation</span>
+                                <span class="text-accent-600 font-semibold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                            <div class="flex justify-between text-body-sm">
+                                <span>Apprentice Training</span>
+                                <span class="text-accent-600 font-semibold">92%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent-600 h-2 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Master Profile 2 -->
+                <div class="cultural-card p-8">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Master artisan Kamala Devi" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-subheading font-semibold text-text-primary mb-2">Master Kamala Devi</h3>
+                            <p class="text-body text-secondary-600 font-semibold mb-3">Kantha Embroidery Master • West Bengal</p>
+                            <p class="text-body text-text-secondary mb-4">
+                                "Each stitch tells a story, each pattern holds our ancestors' wisdom. Through this platform, women in my village now earn with dignity while keeping our traditions alive."
+                            </p>
+                            <div class="flex items-center space-x-4 text-body-sm text-text-secondary">
+                                <span>38 years experience</span>
+                                <span>•</span>
+                                <span>25 women trained</span>
+                                <span>•</span>
+                                <span>Award winner 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Impact -->
+                    <div class="mt-6 p-4 bg-secondary-50 rounded-lg">
+                        <h4 class="font-semibold text-text-primary mb-3">Community Impact</h4>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div class="text-xl font-bold text-secondary-600">25</div>
+                                <div class="text-body-sm text-text-secondary">Women Empowered</div>
+                            </div>
+                            <div>
+                                <div class="text-xl font-bold text-secondary-600">₹4.2L</div>
+                                <div class="text-body-sm text-text-secondary">Monthly Income</div>
+                            </div>
+                            <div>
+                                <div class="text-xl font-bold text-secondary-600">847</div>
+                                <div class="text-body-sm text-text-secondary">Products Sold</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conservation Efforts -->
+            <div class="mt-16">
+                <h3 class="text-heading font-headlines font-bold text-text-primary text-center mb-8">
+                    Conservation & Revival Initiatives
+                </h3>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Endangered Techniques -->
+                    <div class="cultural-card p-6 text-center">
+                        <div class="w-16 h-16 bg-error/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="h-8 w-8 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-subheading font-semibold text-text-primary mb-2">Endangered Crafts</h4>
+                        <div class="text-2xl font-bold text-error mb-2">23</div>
+                        <p class="text-body-sm text-text-secondary">Craft traditions at risk of disappearing within the next decade</p>
+                    </div>
+
+                    <!-- Revival Success -->
+                    <div class="cultural-card p-6 text-center">
+                        <div class="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="h-8 w-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-subheading font-semibold text-text-primary mb-2">Successfully Revived</h4>
+                        <div class="text-2xl font-bold text-success mb-2">8</div>
+                        <p class="text-body-sm text-text-secondary">Traditional crafts brought back from near extinction through platform initiatives</p>
+                    </div>
+
+                    <!-- Active Preservation -->
+                    <div class="cultural-card p-6 text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-subheading font-semibold text-text-primary mb-2">Under Protection</h4>
+                        <div class="text-2xl font-bold text-primary mb-2">47</div>
+                        <p class="text-body-sm text-text-secondary">Craft traditions actively preserved through documentation and artisan support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Significance Stories -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    Cultural Significance & Stories
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Understanding how crafts connect to festivals, ceremonies, and spiritual practices across India
+                </p>
+            </div>
+
+            <!-- Story Categories -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="cultural-card p-6 text-center cursor-pointer" onclick="showCulturalStories('festivals')">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM15 7a1 1 0 112 0v7.268a2 2 0 010 3.464V19a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Festival Crafts</h3>
+                    <p class="text-body-sm text-text-secondary">Diwali diyas, Durga Puja decorations, and ceremonial items</p>
+                </div>
+
+                <div class="cultural-card p-6 text-center cursor-pointer" onclick="showCulturalStories('spiritual')">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Spiritual Arts</h3>
+                    <p class="text-body-sm text-text-secondary">Temple sculptures, prayer items, and sacred geometry</p>
+                </div>
+
+                <div class="cultural-card p-6 text-center cursor-pointer" onclick="showCulturalStories('daily')">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Daily Life</h3>
+                    <p class="text-body-sm text-text-secondary">Household items, cooking vessels, and functional art</p>
+                </div>
+
+                <div class="cultural-card p-6 text-center cursor-pointer" onclick="showCulturalStories('regional')">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-2">Regional Identity</h3>
+                    <p class="text-body-sm text-text-secondary">State symbols, cultural markers, and local traditions</p>
+                </div>
+            </div>
+
+            <!-- Featured Cultural Story -->
+            <div class="cultural-card p-8">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-heading font-headlines font-bold text-text-primary mb-4">
+                            The Sacred Art of Diya Making
+                        </h3>
+                        <p class="text-body text-text-secondary mb-6">
+                            For over 2,000 years, the humble clay diya has been more than just a lamp. During Diwali, millions of these hand-crafted vessels illuminate homes across India, each one representing the triumph of light over darkness, knowledge over ignorance.
+                        </p>
+                        <p class="text-body text-text-secondary mb-6">
+                            Master potter Shyam Lal from Uttar Pradesh explains: "When I shape the clay, I'm not just making a lamp. I'm creating a vessel for prayers, hopes, and the divine light that connects us all."
+                        </p>
+                        <a href="artisan_success_stories.html" class="heritage-button inline-block">
+                            Read More Stories
+                        </a>
+                    </div>
+                    <div class="aspect-video rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Traditional diya making process" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1139317/pexels-photo-1139317.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buyer Education Section -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headlines font-bold text-text-primary mb-4">
+                    Authentic Craft Appreciation Guide
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Learn to identify authentic crafts, understand quality markers, and appreciate the cultural significance of your purchases
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Authenticity Markers -->
+                <div class="cultural-card p-6">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-4">Authenticity Markers</h3>
+                    <ul class="space-y-3 text-body-sm text-text-secondary">
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Hand-crafted irregularities that show human touch
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Natural material variations and textures
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Traditional technique signatures
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Artisan verification certificates
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quality Indicators -->
+                <div class="cultural-card p-6">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-4">Quality Indicators</h3>
+                    <ul class="space-y-3 text-body-sm text-text-secondary">
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Consistent craftsmanship throughout the piece
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Durable construction and finishing
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Appropriate material selection
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Attention to traditional proportions
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cultural Appreciation -->
+                <div class="cultural-card p-6">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-subheading font-semibold text-text-primary mb-4">Cultural Appreciation</h3>
+                    <ul class="space-y-3 text-body-sm text-text-secondary">
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Understanding the story behind each piece
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Respecting traditional usage and care
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Supporting artisan communities
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Sharing cultural knowledge responsibly
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Integration CTA -->
+    <section class="py-16 bg-gradient-to-r from-primary-600 to-primary-700">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-display font-headlines font-bold text-white mb-4">
+                Ready to Connect with Living Heritage?
+            </h2>
+            <p class="text-body-lg text-primary-100 mb-8 max-w-2xl mx-auto">
+                Discover authentic crafts directly from the artisans preserving these ancient traditions. Every purchase supports cultural heritage and empowers communities.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="get_started_hub.html" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-cultural">
+                    Start Shopping
+                </a>
+                <a href="artisan_success_stories.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-cultural">
+                    Meet Artisans
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <svg class="h-8 w-8 text-primary-400" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L28 10V18L20 26L12 18V10L20 2Z" fill="#6366F1"/>
+                            <path d="M20 8L24 12V16L20 20L16 16V12L20 8Z" fill="#F59E0B"/>
+                            <circle cx="20" cy="14" r="2" fill="white"/>
+                        </svg>
+                        <span class="ml-3 text-xl font-headlines font-bold">KalaSaarthi</span>
+                    </div>
+                    <p class="text-gray-300 text-body-sm">
+                        Technology that honors tradition. Empowering artisans, preserving culture.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="ai_assistant_demo.html" class="text-gray-300 hover:text-white transition-cultural">AI Assistant</a></li>
+                        <li><a href="artisan_success_stories.html" class="text-gray-300 hover:text-white transition-cultural">Success Stories</a></li>
+                        <li><a href="cultural_heritage_showcase.html" class="text-gray-300 hover:text-white transition-cultural">Heritage Showcase</a></li>
+                        <li><a href="get_started_hub.html" class="text-gray-300 hover:text-white transition-cultural">Get Started</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Digital Literacy</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Community Forum</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="partnership_portal.html" class="text-gray-300 hover:text-white transition-cultural">Partner With Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Cultural Ambassadors</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Volunteer Translators</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Media Kit</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-body-sm">
+                    © 2025 KalaSaarthi. All Rights Reserved. Made with ❤️ for Indian artisans.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Terms of Service</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Cultural Guidelines</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scroll to sections
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Timeline detail modal (placeholder)
+        function showTimelineDetail(period) {
+            console.log(`Showing details for ${period} period`);
+            // In real implementation, this would open a detailed modal
+        }
+
+        // Regional craft explorer
+        function showRegionalCraft(region) {
+            console.log(`Showing craft details for ${region}`);
+            // In real implementation, this would highlight the region and show details
+        }
+
+        function exploreRegion(region) {
+            console.log(`Exploring ${region} crafts`);
+            // In real implementation, this would navigate to detailed regional page
+        }
+
+        // Technique filtering
+        function filterTechniques(category) {
+            const cards = document.querySelectorAll('.technique-card');
+            const filters = document.querySelectorAll('.technique-filter');
+            
+            // Update filter buttons
+            filters.forEach(filter => {
+                filter.classList.remove('active', 'bg-primary', 'text-white');
+                filter.classList.add('bg-white', 'text-text-primary', 'border', 'border-gray-200');
+            });
+            
+            event.target.classList.remove('bg-white', 'text-text-primary', 'border', 'border-gray-200');
+            event.target.classList.add('active', 'bg-primary', 'text-white');
+            
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Technique demo modal (placeholder)
+        function openTechniqueDemo(technique) {
+            console.log(`Opening 360° demo for ${technique}`);
+            // In real implementation, this would open an immersive 360° viewer
+        }
+
+        // Cultural stories display
+        function showCulturalStories(category) {
+            console.log(`Showing cultural stories for ${category}`);
+            // In real implementation, this would filter and display relevant stories
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cultural cards for animation
+        document.querySelectorAll('.cultural-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
