@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Assistant Demo - KalaSaarthi</title>
+    <meta name="description" content="Experience KalaSaarthi's voice-first AI capabilities through an interactive demo. See how traditional artisans transform their craft into global success stories." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fkalasaarth6818back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background font-body">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-cultural sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2L28 10V18L20 26L12 18V10L20 2Z" fill="#4F46E5"/>
+                        <path d="M20 8L24 12V16L20 20L16 16V12L20 8Z" fill="#F59E0B"/>
+                        <circle cx="20" cy="14" r="2" fill="white"/>
+                    </svg>
+                    <span class="ml-3 text-xl font-headlines font-bold text-text-primary">KalaSaarthi</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-cultural">Home</a>
+                    <a href="ai_assistant_demo.html" class="text-primary font-semibold">AI Demo</a>
+                    <a href="artisan_success_stories.html" class="text-text-secondary hover:text-primary transition-cultural">Success Stories</a>
+                    <a href="cultural_heritage_showcase.html" class="text-text-secondary hover:text-primary transition-cultural">Heritage</a>
+                    <a href="partnership_portal.html" class="text-text-secondary hover:text-primary transition-cultural">Partners</a>
+                    <a href="get_started_hub.html" class="heritage-button">Get Started</a>
+                </div>
+
+                <!-- Language Selector -->
+                <div class="flex items-center space-x-4">
+                    <select class="text-sm border border-gray-200 rounded-lg px-3 py-1 focus:ring-2 focus:ring-primary-500">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="ta">தமிழ்</option>
+                    </select>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden p-2 rounded-lg hover:bg-surface-100" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-3 space-y-3">
+                <a href="homepage.html" class="block text-text-secondary">Home</a>
+                <a href="ai_assistant_demo.html" class="block text-primary font-semibold">AI Demo</a>
+                <a href="artisan_success_stories.html" class="block text-text-secondary">Success Stories</a>
+                <a href="cultural_heritage_showcase.html" class="block text-text-secondary">Heritage</a>
+                <a href="partnership_portal.html" class="block text-text-secondary">Partners</a>
+                <a href="get_started_hub.html" class="block text-primary font-semibold">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary-50 to-accent-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-hero font-headlines font-bold text-text-primary mb-4">
+                    Experience AI that speaks your language
+                </h1>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto mb-8">
+                    See how KalaSaarthi's voice-first AI transforms traditional crafts into global success stories. Follow Meera's journey from village artisan to international recognition.
+                </p>
+                
+                <!-- Demo Type Selection -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <button onclick="startInteractiveDemo()" class="heritage-button">
+                        Try Interactive Demo
+                    </button>
+                    <button onclick="startGuidedDemo()" class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-cultural">
+                        Watch Guided Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Selection Modal -->
+    <div id="languageModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-heritage p-8 max-w-md mx-4">
+            <h3 class="text-heading font-headlines font-semibold text-text-primary mb-6 text-center">
+                Choose your preferred language
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+                <button onclick="selectLanguage('hi')" class="cultural-card p-4 text-center hover:ring-2 hover:ring-primary-500">
+                    <div class="text-2xl mb-2">🇮🇳</div>
+                    <div class="font-semibold">हिंदी</div>
+                    <div class="text-body-sm text-text-secondary">Hindi</div>
+                </button>
+                <button onclick="selectLanguage('en')" class="cultural-card p-4 text-center hover:ring-2 hover:ring-primary-500">
+                    <div class="text-2xl mb-2">🇬🇧</div>
+                    <div class="font-semibold">English</div>
+                    <div class="text-body-sm text-text-secondary">English</div>
+                </button>
+                <button onclick="selectLanguage('bn')" class="cultural-card p-4 text-center hover:ring-2 hover:ring-primary-500">
+                    <div class="text-2xl mb-2">🇧🇩</div>
+                    <div class="font-semibold">বাংলা</div>
+                    <div class="text-body-sm text-text-secondary">Bengali</div>
+                </button>
+                <button onclick="selectLanguage('ta')" class="cultural-card p-4 text-center hover:ring-2 hover:ring-primary-500">
+                    <div class="text-2xl mb-2">🇮🇳</div>
+                    <div class="font-semibold">தமிழ்</div>
+                    <div class="text-body-sm text-text-secondary">Tamil</div>
+                </button>
+                <button onclick="selectLanguage('te')" class="cultural-card p-4 text-center hover:ring-2 hover:ring-primary-500">
+                    <div class="text-2xl mb-2">🇮🇳</div>
+                    <div class="font-semibold">తెలుగు</div>
+                    <div class="text-body-sm text-text-secondary">Telugu</div>
+                </button>
+                <button onclick="selectLanguage('mr')" class="cultural-card p-4 text-center hover:ring-2 hover:ring-primary-500">
+                    <div class="text-2xl mb-2">🇮🇳</div>
+                    <div class="font-semibold">मराठी</div>
+                    <div class="text-body-sm text-text-secondary">Marathi</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Device Compatibility Check -->
+    <section id="compatibilityCheck" class="py-16 bg-white hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-display font-headlines font-bold text-text-primary mb-8">
+                Checking your device compatibility
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <!-- Microphone Check -->
+                <div id="micCheck" class="cultural-card p-6">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">Microphone Access</h3>
+                    <div id="micStatus" class="text-body-sm text-text-secondary">Checking...</div>
+                </div>
+
+                <!-- Camera Check -->
+                <div id="cameraCheck" class="cultural-card p-6">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">Camera Access</h3>
+                    <div id="cameraStatus" class="text-body-sm text-text-secondary">Checking...</div>
+                </div>
+
+                <!-- Internet Speed -->
+                <div id="speedCheck" class="cultural-card p-6">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13.75 7H19a.75.75 0 01.75.75v8.5a.75.75 0 01-.75.75H1a.75.75 0 01-.75-.75v-8.5A.75.75 0 011 7h5.25l2.5-3.5 2.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">Internet Speed</h3>
+                    <div id="speedStatus" class="text-body-sm text-text-secondary">Testing...</div>
+                </div>
+            </div>
+
+            <button id="continueDemo" onclick="startDemo()" class="heritage-button hidden">
+                Continue to Demo
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Demo Interface -->
+    <section id="demoInterface" class="py-16 bg-surface hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Progress Indicator -->
+            <div class="mb-12">
+                <div class="flex items-center justify-center space-x-4 mb-4">
+                    <div id="step1" class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-semibold">1</div>
+                    <div class="w-16 h-1 bg-gray-200 rounded">
+                        <div id="progress1" class="h-full bg-primary rounded transition-all duration-500 w-0"></div>
+                    </div>
+                    <div id="step2" class="w-8 h-8 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-sm font-semibold">2</div>
+                    <div class="w-16 h-1 bg-gray-200 rounded">
+                        <div id="progress2" class="h-full bg-primary rounded transition-all duration-500 w-0"></div>
+                    </div>
+                    <div id="step3" class="w-8 h-8 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-sm font-semibold">3</div>
+                    <div class="w-16 h-1 bg-gray-200 rounded">
+                        <div id="progress3" class="h-full bg-primary rounded transition-all duration-500 w-0"></div>
+                    </div>
+                    <div id="step4" class="w-8 h-8 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-sm font-semibold">4</div>
+                </div>
+                <div class="text-center">
+                    <div id="stepTitle" class="text-subheading font-headlines font-semibold text-text-primary">Meet Meera</div>
+                    <div id="stepDescription" class="text-body text-text-secondary">Traditional textile weaver from Rajasthan</div>
+                </div>
+            </div>
+
+            <!-- Demo Content Area -->
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Left Side - Artisan Profile & Instructions -->
+                <div class="space-y-6">
+                    <!-- Artisan Introduction -->
+                    <div id="artisanProfile" class="cultural-card p-6">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 rounded-full overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Meera Devi, textile weaver" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1139317/pexels-photo-1139317.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
+                            </div>
+                            <div>
+                                <h3 class="text-subheading font-semibold text-text-primary">Meera Devi</h3>
+                                <p class="text-body-sm text-text-secondary">Traditional Bandhani Artist</p>
+                                <p class="text-body-sm text-accent-600">Jodhpur, Rajasthan</p>
+                            </div>
+                        </div>
+                        <p class="text-body text-text-secondary mb-4">
+                            "I've been creating bandhani textiles for 15 years, learning from my mother and grandmother. Each piece tells our family's story."
+                        </p>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="playVoiceIntro()" class="p-2 bg-primary-100 rounded-full hover:bg-primary-200 transition-cultural">
+                                <svg class="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8 5v10l7-5-7-5z"/>
+                                </svg>
+                            </button>
+                            <span class="text-body-sm text-text-secondary">Listen to Meera's introduction</span>
+                        </div>
+                    </div>
+
+                    <!-- Voice Commands Panel -->
+                    <div id="voicePanel" class="cultural-card p-6">
+                        <h4 class="font-semibold text-text-primary mb-4 flex items-center">
+                            <svg class="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                            </svg>
+                            Voice Commands
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                <span class="text-body-sm">"फोटो लो" (Take photo)</span>
+                                <button onclick="simulateVoiceCommand('photo')" class="text-primary hover:text-primary-700 transition-cultural">
+                                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M8 5v10l7-5-7-5z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                <span class="text-body-sm">"कहानी बनाओ" (Create story)</span>
+                                <button onclick="simulateVoiceCommand('story')" class="text-primary hover:text-primary-700 transition-cultural">
+                                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M8 5v10l7-5-7-5z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                <span class="text-body-sm">"कीमत बताओ" (Suggest price)</span>
+                                <button onclick="simulateVoiceCommand('price')" class="text-primary hover:text-primary-700 transition-cultural">
+                                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M8 5v10l7-5-7-5z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Step Instructions -->
+                    <div id="instructionsPanel" class="cultural-card p-6">
+                        <h4 class="font-semibold text-text-primary mb-4">Current Step</h4>
+                        <div id="stepInstructions" class="text-body text-text-secondary">
+                            Click "Upload Photo" to begin Meera's journey, or use voice command "फोटो लो"
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Interactive Demo Area -->
+                <div class="space-y-6">
+                    <!-- Photo Upload & Enhancement -->
+                    <div id="photoSection" class="cultural-card p-6">
+                        <h4 class="font-semibold text-text-primary mb-4">Product Photo</h4>
+                        
+                        <!-- Before Photo -->
+                        <div id="beforePhoto" class="mb-6">
+                            <div class="aspect-square bg-surface-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
+                                <div class="text-center">
+                                    <svg class="h-12 w-12 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                    </svg>
+                                    <button onclick="uploadPhoto()" class="heritage-button">
+                                        Upload Photo
+                                    </button>
+                                    <p class="text-body-sm text-text-secondary mt-2">Or say "फोटो लो"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI Enhancement Process -->
+                        <div id="enhancementProcess" class="hidden">
+                            <div class="grid grid-cols-2 gap-4 mb-4">
+                                <!-- Original -->
+                                <div>
+                                    <h5 class="text-body-sm font-semibold text-text-primary mb-2">Original</h5>
+                                    <div class="aspect-square rounded-lg overflow-hidden">
+                                        <img id="originalImage" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Original bandhani dupatta" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/08/01/11/48/pottery-2564975_960_720.jpg'; this.onerror=null;" />
+                                    </div>
+                                </div>
+                                
+                                <!-- Enhanced -->
+                                <div>
+                                    <h5 class="text-body-sm font-semibold text-text-primary mb-2">AI Enhanced</h5>
+                                    <div class="aspect-square rounded-lg overflow-hidden relative">
+                                        <img id="enhancedImage" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="AI enhanced bandhani dupatta" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/03/29/04/47/industry-2185943_960_720.jpg'; this.onerror=null;" />
+                                        <div class="absolute top-2 right-2 bg-primary-600 text-white px-2 py-1 rounded text-xs font-semibold">
+                                            AI Enhanced
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Enhancement Features -->
+                            <div class="space-y-2">
+                                <div id="enhancement1" class="flex items-center p-2 bg-surface rounded opacity-50">
+                                    <div class="w-4 h-4 rounded-full bg-gray-300 mr-3"></div>
+                                    <span class="text-body-sm">Background removal</span>
+                                </div>
+                                <div id="enhancement2" class="flex items-center p-2 bg-surface rounded opacity-50">
+                                    <div class="w-4 h-4 rounded-full bg-gray-300 mr-3"></div>
+                                    <span class="text-body-sm">Professional lighting</span>
+                                </div>
+                                <div id="enhancement3" class="flex items-center p-2 bg-surface rounded opacity-50">
+                                    <div class="w-4 h-4 rounded-full bg-gray-300 mr-3"></div>
+                                    <span class="text-body-sm">Color enhancement</span>
+                                </div>
+                                <div id="enhancement4" class="flex items-center p-2 bg-surface rounded opacity-50">
+                                    <div class="w-4 h-4 rounded-full bg-gray-300 mr-3"></div>
+                                    <span class="text-body-sm">Detail sharpening</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story Generation -->
+                    <div id="storySection" class="cultural-card p-6 hidden">
+                        <h4 class="font-semibold text-text-primary mb-4">AI-Generated Story</h4>
+                        
+                        <div class="space-y-4">
+                            <!-- Language Tabs -->
+                            <div class="flex space-x-2 border-b border-gray-200">
+                                <button onclick="showStory('english')" class="px-4 py-2 text-body-sm font-semibold text-primary border-b-2 border-primary">English</button>
+                                <button onclick="showStory('hindi')" class="px-4 py-2 text-body-sm text-text-secondary hover:text-primary transition-cultural">हिंदी</button>
+                                <button onclick="showStory('gujarati')" class="px-4 py-2 text-body-sm text-text-secondary hover:text-primary transition-cultural">ગુજરાતી</button>
+                            </div>
+
+                            <!-- Story Content -->
+                            <div id="storyContent" class="space-y-4">
+                                <div id="englishStory" class="space-y-3">
+                                    <h5 class="font-semibold text-text-primary">Handwoven Bandhani Dupatta - A Legacy of Colors</h5>
+                                    <p class="text-body text-text-secondary">
+                                        This exquisite bandhani dupatta represents three generations of artistry from Meera Devi's family in Jodhpur, Rajasthan. Each tiny dot is hand-tied and dyed using traditional techniques passed down through centuries.
+                                    </p>
+                                    <p class="text-body text-text-secondary">
+                                        The vibrant colors are achieved using natural dyes, and the intricate patterns tell stories of celebration, prosperity, and cultural heritage. This piece took 15 days to complete, with over 10,000 individual tie-dye points.
+                                    </p>
+                                    <div class="flex items-center space-x-2">
+                                        <button onclick="playStoryAudio('english')" class="p-2 bg-primary-100 rounded-full hover:bg-primary-200 transition-cultural">
+                                            <svg class="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M8 5v10l7-5-7-5z"/>
+                                            </svg>
+                                        </button>
+                                        <span class="text-body-sm text-text-secondary">Listen to story</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Intelligence -->
+                    <div id="pricingSection" class="cultural-card p-6 hidden">
+                        <h4 class="font-semibold text-text-primary mb-4">AI Pricing Intelligence</h4>
+                        
+                        <div class="space-y-4">
+                            <!-- Pricing Analysis -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center p-4 bg-surface rounded-lg">
+                                    <div class="text-2xl font-bold text-accent-600">₹2,500</div>
+                                    <div class="text-body-sm text-text-secondary">Local Market</div>
+                                </div>
+                                <div class="text-center p-4 bg-primary-50 rounded-lg ring-2 ring-primary-500">
+                                    <div class="text-2xl font-bold text-primary-600">₹8,500</div>
+                                    <div class="text-body-sm text-text-secondary">Recommended Price</div>
+                                </div>
+                            </div>
+
+                            <!-- Pricing Factors -->
+                            <div class="space-y-3">
+                                <h5 class="font-semibold text-text-primary">Pricing Factors</h5>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between items-center p-2 bg-surface rounded">
+                                        <span class="text-body-sm">Craft complexity</span>
+                                        <span class="text-body-sm font-semibold text-secondary-600">High (+40%)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center p-2 bg-surface rounded">
+                                        <span class="text-body-sm">Time investment</span>
+                                        <span class="text-body-sm font-semibold text-secondary-600">15 days (+35%)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center p-2 bg-surface rounded">
+                                        <span class="text-body-sm">Cultural significance</span>
+                                        <span class="text-body-sm font-semibold text-secondary-600">Heritage (+25%)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center p-2 bg-surface rounded">
+                                        <span class="text-body-sm">Global demand</span>
+                                        <span class="text-body-sm font-semibold text-secondary-600">High (+30%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Marketplace Integration -->
+                    <div id="marketplaceSection" class="cultural-card p-6 hidden">
+                        <h4 class="font-semibold text-text-primary mb-4">Marketplace Integration</h4>
+                        
+                        <div class="space-y-4">
+                            <!-- Platform Selection -->
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="text-center p-3 bg-surface rounded-lg border-2 border-primary-500">
+                                    <div class="w-8 h-8 bg-primary-600 rounded mx-auto mb-2"></div>
+                                    <div class="text-body-sm font-semibold">Etsy</div>
+                                    <div class="text-caption text-secondary-600">Active</div>
+                                </div>
+                                <div class="text-center p-3 bg-surface rounded-lg border-2 border-accent-500">
+                                    <div class="w-8 h-8 bg-accent-600 rounded mx-auto mb-2"></div>
+                                    <div class="text-body-sm font-semibold">Amazon</div>
+                                    <div class="text-caption text-secondary-600">Active</div>
+                                </div>
+                                <div class="text-center p-3 bg-surface rounded-lg border-2 border-secondary-500">
+                                    <div class="w-8 h-8 bg-secondary-600 rounded mx-auto mb-2"></div>
+                                    <div class="text-body-sm font-semibold">Meesho</div>
+                                    <div class="text-caption text-secondary-600">Active</div>
+                                </div>
+                            </div>
+
+                            <!-- Listing Preview -->
+                            <div class="border border-gray-200 rounded-lg p-4">
+                                <h5 class="font-semibold text-text-primary mb-3">Listing Preview</h5>
+                                <div class="flex space-x-4">
+                                    <div class="w-20 h-20 rounded-lg overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Product listing preview" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/03/29/04/47/industry-2185943_960_720.jpg'; this.onerror=null;" />
+                                    </div>
+                                    <div class="flex-1">
+                                        <h6 class="font-semibold text-text-primary text-body-sm">Handwoven Bandhani Dupatta - A Legacy of Colors</h6>
+                                        <p class="text-caption text-text-secondary">By Meera Devi, Jodhpur</p>
+                                        <div class="flex items-center space-x-2 mt-1">
+                                            <span class="text-body-sm font-semibold text-primary-600">₹8,500</span>
+                                            <span class="text-caption text-text-secondary line-through">₹12,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Success Metrics -->
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <div class="text-lg font-bold text-primary-600">3.2x</div>
+                                    <div class="text-caption text-text-secondary">Price Increase</div>
+                                </div>
+                                <div>
+                                    <div class="text-lg font-bold text-secondary-600">47</div>
+                                    <div class="text-caption text-text-secondary">Global Reach</div>
+                                </div>
+                                <div>
+                                    <div class="text-lg font-bold text-accent-600">95%</div>
+                                    <div class="text-caption text-text-secondary">Quality Score</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demo Navigation -->
+            <div class="flex justify-center mt-12 space-x-4">
+                <button id="prevStep" onclick="previousStep()" class="px-6 py-3 border border-gray-300 rounded-lg text-text-secondary hover:bg-surface transition-cultural hidden">
+                    Previous Step
+                </button>
+                <button id="nextStep" onclick="nextStep()" class="heritage-button hidden">
+                    Next Step
+                </button>
+                <button id="restartDemo" onclick="restartDemo()" class="px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-cultural hidden">
+                    Try Again
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Celebration -->
+    <section id="successSection" class="py-16 bg-gradient-to-r from-secondary-600 to-secondary-700 hidden">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="h-12 w-12 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h2 class="text-display font-headlines font-bold text-white mb-4">
+                    Congratulations! Demo Complete
+                </h2>
+                <p class="text-body-lg text-secondary-100 mb-8">
+                    You've experienced how KalaSaarthi transforms traditional crafts into global success stories. Meera's dupatta is now ready for international markets!
+                </p>
+            </div>
+
+            <!-- Results Summary -->
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                    <div class="text-3xl font-bold text-white mb-2">240%</div>
+                    <div class="text-secondary-100">Price Increase</div>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                    <div class="text-3xl font-bold text-white mb-2">3</div>
+                    <div class="text-secondary-100">Global Platforms</div>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                    <div class="text-3xl font-bold text-white mb-2">5 min</div>
+                    <div class="text-secondary-100">Setup Time</div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="get_started_hub.html" class="bg-white text-secondary-600 px-8 py-4 rounded-lg font-semibold hover:bg-secondary-50 transition-cultural">
+                    Start Your Journey
+                </a>
+                <button onclick="restartDemo()" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-secondary-600 transition-cultural">
+                    Try Demo Again
+                </button>
+                <a href="artisan_success_stories.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-secondary-600 transition-cultural">
+                    See Success Stories
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <svg class="h-8 w-8 text-primary-400" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L28 10V18L20 26L12 18V10L20 2Z" fill="#6366F1"/>
+                            <path d="M20 8L24 12V16L20 20L16 16V12L20 8Z" fill="#F59E0B"/>
+                            <circle cx="20" cy="14" r="2" fill="white"/>
+                        </svg>
+                        <span class="ml-3 text-xl font-headlines font-bold">KalaSaarthi</span>
+                    </div>
+                    <p class="text-gray-300 text-body-sm">
+                        Technology that honors tradition. Empowering artisans, preserving culture.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="ai_assistant_demo.html" class="text-gray-300 hover:text-white transition-cultural">AI Assistant</a></li>
+                        <li><a href="artisan_success_stories.html" class="text-gray-300 hover:text-white transition-cultural">Success Stories</a></li>
+                        <li><a href="cultural_heritage_showcase.html" class="text-gray-300 hover:text-white transition-cultural">Heritage Showcase</a></li>
+                        <li><a href="get_started_hub.html" class="text-gray-300 hover:text-white transition-cultural">Get Started</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Digital Literacy</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Community Forum</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-body-sm">
+                        <li><a href="partnership_portal.html" class="text-gray-300 hover:text-white transition-cultural">Partner With Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Cultural Ambassadors</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Volunteer Translators</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Media Kit</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-body-sm">
+                    © 2025 KalaSaarthi. All Rights Reserved. Made with ❤️ for Indian artisans.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Terms of Service</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-cultural">Cultural Guidelines</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentStep = 1;
+        let selectedLanguage = 'en';
+        let isInteractiveMode = true;
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Start interactive demo
+        function startInteractiveDemo() {
+            isInteractiveMode = true;
+            showLanguageModal();
+        }
+
+        // Start guided demo
+        function startGuidedDemo() {
+            isInteractiveMode = false;
+            showLanguageModal();
+        }
+
+        // Show language selection modal
+        function showLanguageModal() {
+            document.getElementById('languageModal').classList.remove('hidden');
+        }
+
+        // Select language and proceed
+        function selectLanguage(lang) {
+            selectedLanguage = lang;
+            document.getElementById('languageModal').classList.add('hidden');
+            showCompatibilityCheck();
+        }
+
+        // Show device compatibility check
+        function showCompatibilityCheck() {
+            document.getElementById('compatibilityCheck').classList.remove('hidden');
+            
+            // Simulate compatibility checks
+            setTimeout(() => {
+                document.getElementById('micStatus').innerHTML = '<span class="text-success">✓ Available</span>';
+                document.getElementById('micCheck').classList.add('ring-2', 'ring-success');
+            }, 1000);
+
+            setTimeout(() => {
+                document.getElementById('cameraStatus').innerHTML = '<span class="text-success">✓ Available</span>';
+                document.getElementById('cameraCheck').classList.add('ring-2', 'ring-success');
+            }, 2000);
+
+            setTimeout(() => {
+                document.getElementById('speedStatus').innerHTML = '<span class="text-success">✓ Good (4.2 Mbps)</span>';
+                document.getElementById('speedCheck').classList.add('ring-2', 'ring-success');
+                document.getElementById('continueDemo').classList.remove('hidden');
+            }, 3000);
+        }
+
+        // Start the main demo
+        function startDemo() {
+            document.getElementById('compatibilityCheck').classList.add('hidden');
+            document.getElementById('demoInterface').classList.remove('hidden');
+            updateStepUI();
+        }
+
+        // Upload photo simulation
+        function uploadPhoto() {
+            document.getElementById('beforePhoto').classList.add('hidden');
+            document.getElementById('enhancementProcess').classList.remove('hidden');
+            
+            // Animate enhancement process
+            const enhancements = ['enhancement1', 'enhancement2', 'enhancement3', 'enhancement4'];
+            enhancements.forEach((id, index) => {
+                setTimeout(() => {
+                    const element = document.getElementById(id);
+                    element.classList.remove('opacity-50');
+                    element.querySelector('.w-4').classList.remove('bg-gray-300');
+                    element.querySelector('.w-4').classList.add('bg-success');
+                }, (index + 1) * 800);
+            });
+
+            setTimeout(() => {
+                document.getElementById('nextStep').classList.remove('hidden');
+                updateProgress(1);
+            }, 4000);
+        }
+
+        // Voice command simulation
+        function simulateVoiceCommand(command) {
+            switch(command) {
+                case 'photo':
+                    if (currentStep === 1) uploadPhoto();
+                    break;
+                case 'story':
+                    if (currentStep === 2) generateStory();
+                    break;
+                case 'price':
+                    if (currentStep === 3) generatePricing();
+                    break;
+            }
+        }
+
+        // Generate story
+        function generateStory() {
+            document.getElementById('storySection').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('nextStep').classList.remove('hidden');
+                updateProgress(2);
+            }, 2000);
+        }
+
+        // Generate pricing
+        function generatePricing() {
+            document.getElementById('pricingSection').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('nextStep').classList.remove('hidden');
+                updateProgress(3);
+            }, 2000);
+        }
+
+        // Show marketplace integration
+        function showMarketplace() {
+            document.getElementById('marketplaceSection').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('nextStep').classList.add('hidden');
+                document.getElementById('restartDemo').classList.remove('hidden');
+                updateProgress(4);
+                
+                // Show success after a delay
+                setTimeout(() => {
+                    document.getElementById('demoInterface').classList.add('hidden');
+                    document.getElementById('successSection').classList.remove('hidden');
+                }, 3000);
+            }, 2000);
+        }
+
+        // Navigation functions
+        function nextStep() {
+            currentStep++;
+            updateStepUI();
+            
+            switch(currentStep) {
+                case 2:
+                    generateStory();
+                    break;
+                case 3:
+                    generatePricing();
+                    break;
+                case 4:
+                    showMarketplace();
+                    break;
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateStepUI();
+            }
+        }
+
+        // Update step UI
+        function updateStepUI() {
+            const steps = [
+                { title: "Meet Meera", description: "Traditional textile weaver from Rajasthan", instruction: "Click 'Upload Photo' to begin Meera's journey, or use voice command 'फोटो लो'" },
+                { title: "AI Story Creation", description: "Generating compelling product narratives", instruction: "Watch as AI creates Meera's story in multiple languages" },
+                { title: "Smart Pricing", description: "AI-powered pricing intelligence", instruction: "See how AI suggests optimal pricing based on craft complexity" },
+                { title: "Global Marketplace", description: "Multi-platform integration", instruction: "Experience how the listing appears across global platforms" }
+            ];
+
+            const step = steps[currentStep - 1];
+            document.getElementById('stepTitle').textContent = step.title;
+            document.getElementById('stepDescription').textContent = step.description;
+            document.getElementById('stepInstructions').textContent = step.instruction;
+
+            // Update step indicators
+            for (let i = 1; i <= 4; i++) {
+                const stepElement = document.getElementById(`step${i}`);
+                if (i <= currentStep) {
+                    stepElement.classList.remove('bg-gray-200', 'text-gray-500');
+                    stepElement.classList.add('bg-primary', 'text-white');
+                } else {
+                    stepElement.classList.remove('bg-primary', 'text-white');
+                    stepElement.classList.add('bg-gray-200', 'text-gray-500');
+                }
+            }
+
+            // Show/hide navigation buttons
+            document.getElementById('prevStep').classList.toggle('hidden', currentStep === 1);
+            document.getElementById('nextStep').classList.add('hidden');
+        }
+
+        // Update progress bars
+        function updateProgress(step) {
+            for (let i = 1; i <= step; i++) {
+                document.getElementById(`progress${i}`).style.width = '100%';
+            }
+        }
+
+        // Restart demo
+        function restartDemo() {
+            currentStep = 1;
+            document.getElementById('successSection').classList.add('hidden');
+            document.getElementById('demoInterface').classList.remove('hidden');
+            
+            // Reset all sections
+            document.getElementById('beforePhoto').classList.remove('hidden');
+            document.getElementById('enhancementProcess').classList.add('hidden');
+            document.getElementById('storySection').classList.add('hidden');
+            document.getElementById('pricingSection').classList.add('hidden');
+            document.getElementById('marketplaceSection').classList.add('hidden');
+            
+            // Reset progress
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`progress${i}`).style.width = '0%';
+            }
+            
+            updateStepUI();
+        }
+
+        // Audio playback simulation
+        function playVoiceIntro() {
+            console.log('Playing Meera\'s voice introduction');
+        }
+
+        function playStoryAudio(language) {
+            console.log(`Playing story in ${language}`);
+        }
+
+        // Story language switching
+        function showStory(language) {
+            // Update active tab
+            document.querySelectorAll('[onclick^="showStory"]').forEach(tab => {
+                tab.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                tab.classList.add('text-text-secondary');
+            });
+            
+            event.target.classList.remove('text-text-secondary');
+            event.target.classList.add('text-primary', 'border-b-2', 'border-primary');
+
+            // Show corresponding story content
+            const stories = {
+                hindi: {
+                    title: "हस्तनिर्मित बंधनी दुपट्टा - रंगों की विरासत",
+                    content: "यह खूबसूरत बंधनी दुपट्टा जोधपुर, राजस्थान की मीरा देवी के परिवार की तीन पीढ़ियों की कलाकारी को दर्शाता है। हर छोटा बिंदु हाथ से बांधा और रंगा गया है, जो सदियों से चली आ रही पारंपरिक तकनीकों का उपयोग करके बनाया गया है।"
+                },
+                gujarati: {
+                    title: "હસ્તકલા બંધણી દુપટ્ટો - રંગોનો વારસો",
+                    content: "આ સુંદર બંધણી દુપટ્ટો જોધપુર, રાજસ્થાનની મીરા દેવીના પરિવારની ત્રણ પેઢીઓની કલાકારીને દર્શાવે છે। દરેક નાનો બિંદુ હાથથી બાંધવામાં અને રંગવામાં આવ્યો છે, જે સદીઓથી ચાલતી પરંપરાગત તકનીકોનો ઉપયોગ કરીને બનાવવામાં આવ્યો છે।"
+                }
+            };
+
+            if (language !== 'english' && stories[language]) {
+                document.getElementById('storyContent').innerHTML = `
+                    <div class="space-y-3">
+                        <h5 class="font-semibold text-text-primary">${stories[language].title}</h5>
+                        <p class="text-body text-text-secondary">${stories[language].content}</p>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="playStoryAudio('${language}')" class="p-2 bg-primary-100 rounded-full hover:bg-primary-200 transition-cultural">
+                                <svg class="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8 5v10l7-5-7-5z"/>
+                                </svg>
+                            </button>
+                            <span class="text-body-sm text-text-secondary">कहानी सुनें</span>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize demo on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-start compatibility check if coming from direct link
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('autostart') === 'true') {
+                startInteractiveDemo();
+            }
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
